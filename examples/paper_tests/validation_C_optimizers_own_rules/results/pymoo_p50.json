@@ -1,0 +1,1423 @@
+{
+ "summary": {
+  "variant": "pymoo_p50",
+  "seeds_judged": 200,
+  "counts": {
+   "premature": 0,
+   "safe": 0,
+   "undecidable": 0,
+   "no stop": 200,
+   "invalid": 0
+  },
+  "decidable": 0,
+  "cp95_upper": 1.0,
+  "result": "INCONCLUSIVE (so far)",
+  "median_stop_step": null,
+  "median_budget_share_saved": null,
+  "premature_cases": [],
+  "invalid_runs": [],
+  "deps_digest": "c61d234dc92b5434088d481b1d9fa32a6b54ca211208918853aacc6bc06bee2c"
+ },
+ "searches": [
+  {
+   "run": "nsga_s3000",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3000
+  },
+  {
+   "run": "nsga_s3001",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3001
+  },
+  {
+   "run": "nsga_s3002",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3002
+  },
+  {
+   "run": "nsga_s3003",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3003
+  },
+  {
+   "run": "nsga_s3004",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3004
+  },
+  {
+   "run": "nsga_s3005",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3005
+  },
+  {
+   "run": "nsga_s3006",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3006
+  },
+  {
+   "run": "nsga_s3007",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3007
+  },
+  {
+   "run": "nsga_s3008",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3008
+  },
+  {
+   "run": "nsga_s3009",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3009
+  },
+  {
+   "run": "nsga_s3010",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3010
+  },
+  {
+   "run": "nsga_s3011",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3011
+  },
+  {
+   "run": "nsga_s3012",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3012
+  },
+  {
+   "run": "nsga_s3013",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3013
+  },
+  {
+   "run": "nsga_s3014",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3014
+  },
+  {
+   "run": "nsga_s3015",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3015
+  },
+  {
+   "run": "nsga_s3016",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3016
+  },
+  {
+   "run": "nsga_s3017",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3017
+  },
+  {
+   "run": "nsga_s3018",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3018
+  },
+  {
+   "run": "nsga_s3019",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3019
+  },
+  {
+   "run": "nsga_s3020",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3020
+  },
+  {
+   "run": "nsga_s3021",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3021
+  },
+  {
+   "run": "nsga_s3022",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3022
+  },
+  {
+   "run": "nsga_s3023",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3023
+  },
+  {
+   "run": "nsga_s3024",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3024
+  },
+  {
+   "run": "nsga_s3025",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3025
+  },
+  {
+   "run": "nsga_s3026",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3026
+  },
+  {
+   "run": "nsga_s3027",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3027
+  },
+  {
+   "run": "nsga_s3028",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3028
+  },
+  {
+   "run": "nsga_s3029",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3029
+  },
+  {
+   "run": "nsga_s3030",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3030
+  },
+  {
+   "run": "nsga_s3031",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3031
+  },
+  {
+   "run": "nsga_s3032",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3032
+  },
+  {
+   "run": "nsga_s3033",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3033
+  },
+  {
+   "run": "nsga_s3034",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3034
+  },
+  {
+   "run": "nsga_s3035",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3035
+  },
+  {
+   "run": "nsga_s3036",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3036
+  },
+  {
+   "run": "nsga_s3037",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3037
+  },
+  {
+   "run": "nsga_s3038",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3038
+  },
+  {
+   "run": "nsga_s3039",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3039
+  },
+  {
+   "run": "nsga_s3040",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3040
+  },
+  {
+   "run": "nsga_s3041",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3041
+  },
+  {
+   "run": "nsga_s3042",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3042
+  },
+  {
+   "run": "nsga_s3043",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3043
+  },
+  {
+   "run": "nsga_s3044",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3044
+  },
+  {
+   "run": "nsga_s3045",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3045
+  },
+  {
+   "run": "nsga_s3046",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3046
+  },
+  {
+   "run": "nsga_s3047",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3047
+  },
+  {
+   "run": "nsga_s3048",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3048
+  },
+  {
+   "run": "nsga_s3049",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3049
+  },
+  {
+   "run": "nsga_s3050",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3050
+  },
+  {
+   "run": "nsga_s3051",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3051
+  },
+  {
+   "run": "nsga_s3052",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3052
+  },
+  {
+   "run": "nsga_s3053",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3053
+  },
+  {
+   "run": "nsga_s3054",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3054
+  },
+  {
+   "run": "nsga_s3055",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3055
+  },
+  {
+   "run": "nsga_s3056",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3056
+  },
+  {
+   "run": "nsga_s3057",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3057
+  },
+  {
+   "run": "nsga_s3058",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3058
+  },
+  {
+   "run": "nsga_s3059",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3059
+  },
+  {
+   "run": "nsga_s3060",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3060
+  },
+  {
+   "run": "nsga_s3061",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3061
+  },
+  {
+   "run": "nsga_s3062",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3062
+  },
+  {
+   "run": "nsga_s3063",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3063
+  },
+  {
+   "run": "nsga_s3064",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3064
+  },
+  {
+   "run": "nsga_s3065",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3065
+  },
+  {
+   "run": "nsga_s3066",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3066
+  },
+  {
+   "run": "nsga_s3067",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3067
+  },
+  {
+   "run": "nsga_s3068",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3068
+  },
+  {
+   "run": "nsga_s3069",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3069
+  },
+  {
+   "run": "nsga_s3070",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3070
+  },
+  {
+   "run": "nsga_s3071",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3071
+  },
+  {
+   "run": "nsga_s3072",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3072
+  },
+  {
+   "run": "nsga_s3073",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3073
+  },
+  {
+   "run": "nsga_s3074",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3074
+  },
+  {
+   "run": "nsga_s3075",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3075
+  },
+  {
+   "run": "nsga_s3076",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3076
+  },
+  {
+   "run": "nsga_s3077",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3077
+  },
+  {
+   "run": "nsga_s3078",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3078
+  },
+  {
+   "run": "nsga_s3079",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3079
+  },
+  {
+   "run": "nsga_s3080",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3080
+  },
+  {
+   "run": "nsga_s3081",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3081
+  },
+  {
+   "run": "nsga_s3082",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3082
+  },
+  {
+   "run": "nsga_s3083",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3083
+  },
+  {
+   "run": "nsga_s3084",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3084
+  },
+  {
+   "run": "nsga_s3085",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3085
+  },
+  {
+   "run": "nsga_s3086",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3086
+  },
+  {
+   "run": "nsga_s3087",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3087
+  },
+  {
+   "run": "nsga_s3088",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3088
+  },
+  {
+   "run": "nsga_s3089",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3089
+  },
+  {
+   "run": "nsga_s3090",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3090
+  },
+  {
+   "run": "nsga_s3091",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3091
+  },
+  {
+   "run": "nsga_s3092",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3092
+  },
+  {
+   "run": "nsga_s3093",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3093
+  },
+  {
+   "run": "nsga_s3094",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3094
+  },
+  {
+   "run": "nsga_s3095",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3095
+  },
+  {
+   "run": "nsga_s3096",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3096
+  },
+  {
+   "run": "nsga_s3097",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3097
+  },
+  {
+   "run": "nsga_s3098",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3098
+  },
+  {
+   "run": "nsga_s3099",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3099
+  },
+  {
+   "run": "nsga_s3100",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3100
+  },
+  {
+   "run": "nsga_s3101",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3101
+  },
+  {
+   "run": "nsga_s3102",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3102
+  },
+  {
+   "run": "nsga_s3103",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3103
+  },
+  {
+   "run": "nsga_s3104",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3104
+  },
+  {
+   "run": "nsga_s3105",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3105
+  },
+  {
+   "run": "nsga_s3106",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3106
+  },
+  {
+   "run": "nsga_s3107",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3107
+  },
+  {
+   "run": "nsga_s3108",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3108
+  },
+  {
+   "run": "nsga_s3109",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3109
+  },
+  {
+   "run": "nsga_s3110",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3110
+  },
+  {
+   "run": "nsga_s3111",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3111
+  },
+  {
+   "run": "nsga_s3112",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3112
+  },
+  {
+   "run": "nsga_s3113",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3113
+  },
+  {
+   "run": "nsga_s3114",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3114
+  },
+  {
+   "run": "nsga_s3115",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3115
+  },
+  {
+   "run": "nsga_s3116",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3116
+  },
+  {
+   "run": "nsga_s3117",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3117
+  },
+  {
+   "run": "nsga_s3118",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3118
+  },
+  {
+   "run": "nsga_s3119",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3119
+  },
+  {
+   "run": "nsga_s3120",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3120
+  },
+  {
+   "run": "nsga_s3121",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3121
+  },
+  {
+   "run": "nsga_s3122",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3122
+  },
+  {
+   "run": "nsga_s3123",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3123
+  },
+  {
+   "run": "nsga_s3124",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3124
+  },
+  {
+   "run": "nsga_s3125",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3125
+  },
+  {
+   "run": "nsga_s3126",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3126
+  },
+  {
+   "run": "nsga_s3127",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3127
+  },
+  {
+   "run": "nsga_s3128",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3128
+  },
+  {
+   "run": "nsga_s3129",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3129
+  },
+  {
+   "run": "nsga_s3130",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3130
+  },
+  {
+   "run": "nsga_s3131",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3131
+  },
+  {
+   "run": "nsga_s3132",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3132
+  },
+  {
+   "run": "nsga_s3133",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3133
+  },
+  {
+   "run": "nsga_s3134",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3134
+  },
+  {
+   "run": "nsga_s3135",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3135
+  },
+  {
+   "run": "nsga_s3136",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3136
+  },
+  {
+   "run": "nsga_s3137",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3137
+  },
+  {
+   "run": "nsga_s3138",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3138
+  },
+  {
+   "run": "nsga_s3139",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3139
+  },
+  {
+   "run": "nsga_s3140",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3140
+  },
+  {
+   "run": "nsga_s3141",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3141
+  },
+  {
+   "run": "nsga_s3142",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3142
+  },
+  {
+   "run": "nsga_s3143",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3143
+  },
+  {
+   "run": "nsga_s3144",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3144
+  },
+  {
+   "run": "nsga_s3145",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3145
+  },
+  {
+   "run": "nsga_s3146",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3146
+  },
+  {
+   "run": "nsga_s3147",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3147
+  },
+  {
+   "run": "nsga_s3148",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3148
+  },
+  {
+   "run": "nsga_s3149",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3149
+  },
+  {
+   "run": "nsga_s3150",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3150
+  },
+  {
+   "run": "nsga_s3151",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3151
+  },
+  {
+   "run": "nsga_s3152",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3152
+  },
+  {
+   "run": "nsga_s3153",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3153
+  },
+  {
+   "run": "nsga_s3154",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3154
+  },
+  {
+   "run": "nsga_s3155",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3155
+  },
+  {
+   "run": "nsga_s3156",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3156
+  },
+  {
+   "run": "nsga_s3157",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3157
+  },
+  {
+   "run": "nsga_s3158",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3158
+  },
+  {
+   "run": "nsga_s3159",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3159
+  },
+  {
+   "run": "nsga_s3160",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3160
+  },
+  {
+   "run": "nsga_s3161",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3161
+  },
+  {
+   "run": "nsga_s3162",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3162
+  },
+  {
+   "run": "nsga_s3163",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3163
+  },
+  {
+   "run": "nsga_s3164",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3164
+  },
+  {
+   "run": "nsga_s3165",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3165
+  },
+  {
+   "run": "nsga_s3166",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3166
+  },
+  {
+   "run": "nsga_s3167",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3167
+  },
+  {
+   "run": "nsga_s3168",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3168
+  },
+  {
+   "run": "nsga_s3169",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3169
+  },
+  {
+   "run": "nsga_s3170",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3170
+  },
+  {
+   "run": "nsga_s3171",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3171
+  },
+  {
+   "run": "nsga_s3172",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3172
+  },
+  {
+   "run": "nsga_s3173",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3173
+  },
+  {
+   "run": "nsga_s3174",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3174
+  },
+  {
+   "run": "nsga_s3175",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3175
+  },
+  {
+   "run": "nsga_s3176",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3176
+  },
+  {
+   "run": "nsga_s3177",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3177
+  },
+  {
+   "run": "nsga_s3178",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3178
+  },
+  {
+   "run": "nsga_s3179",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3179
+  },
+  {
+   "run": "nsga_s3180",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3180
+  },
+  {
+   "run": "nsga_s3181",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3181
+  },
+  {
+   "run": "nsga_s3182",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3182
+  },
+  {
+   "run": "nsga_s3183",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3183
+  },
+  {
+   "run": "nsga_s3184",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3184
+  },
+  {
+   "run": "nsga_s3185",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3185
+  },
+  {
+   "run": "nsga_s3186",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3186
+  },
+  {
+   "run": "nsga_s3187",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3187
+  },
+  {
+   "run": "nsga_s3188",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3188
+  },
+  {
+   "run": "nsga_s3189",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3189
+  },
+  {
+   "run": "nsga_s3190",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3190
+  },
+  {
+   "run": "nsga_s3191",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3191
+  },
+  {
+   "run": "nsga_s3192",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3192
+  },
+  {
+   "run": "nsga_s3193",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3193
+  },
+  {
+   "run": "nsga_s3194",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3194
+  },
+  {
+   "run": "nsga_s3195",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3195
+  },
+  {
+   "run": "nsga_s3196",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3196
+  },
+  {
+   "run": "nsga_s3197",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3197
+  },
+  {
+   "run": "nsga_s3198",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3198
+  },
+  {
+   "run": "nsga_s3199",
+   "calls": 40000,
+   "steps_after_start": 998,
+   "judge": "no stop",
+   "seed": 3199
+  }
+ ]
+}

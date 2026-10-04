@@ -38,10 +38,10 @@ calib.calibrate()            # entry: load contract+dag -> objectives -> backend
   only for real trade-offs, else scalarize. Don't make one objective per metric-per-site.
 - **Few free parameters** first (equifinality); use `tie`/hierarchical `scope` before freeing more.
 - **Holdout validation is mandatory** (years/sites/regions) — over-fit risk otherwise.
-- **Expensive models** (PCSE national, distributed hydro): staged —
-  sensitivity screen (pestpp-sen / SPOTPY FAST) → representative-subset calibration →
-  tied/hierarchical parameterization → surrogate-assisted → full-domain confirm on a shortlist.
-  Start with **DDS or regularized PEST++**, not population MOEAs.
+- **Expensive models** (PCSE national, distributed hydro): the agent decides ONCE, from the KI, which
+  parameters to calibrate (tied/hierarchical parameterization helps); the engine runs one search on
+  exactly those — no Morris screen, no staged escalation (removed in build step 8, 2026-09-30; see
+  CALIBRATION_YAML_SCHEMA.md C13). Start with **DDS or regularized PEST++**, not population MOEAs.
 
 ## Reuses the platform's strengths
 - **Obs-support alignment** (codex's #1 source of false "improvements") is already handled

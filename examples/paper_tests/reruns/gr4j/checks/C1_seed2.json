@@ -1,0 +1,50 @@
+{
+  "tag": "C1_seed2",
+  "same": {
+    "status": true,
+    "algorithm": true,
+    "n_evaluations": true,
+    "best_params": true,
+    "best_value": true,
+    "best_metrics": true,
+    "objectives": true
+  },
+  "orig": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1932,
+    "best_params": {
+      "X1": 147.68520018892207,
+      "X2": 0.5842232099106478,
+      "X3": 60.60773798158274,
+      "X4": 2.3711175949975907
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "rerun": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1932,
+    "best_params": {
+      "X1": 147.68520018892207,
+      "X2": 0.5842232099106478,
+      "X3": 60.60773798158274,
+      "X4": 2.3711175949975907
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "cache_lines": [
+    1934,
+    1934
+  ],
+  "cache_identical": true,
+  "identical": true
+}

@@ -1,0 +1,50 @@
+{
+  "tag": "C1_seed2_nse",
+  "same": {
+    "status": true,
+    "algorithm": true,
+    "n_evaluations": true,
+    "best_params": true,
+    "best_value": true,
+    "best_metrics": true,
+    "objectives": true
+  },
+  "orig": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1921,
+    "best_params": {
+      "X1": 262.6655514204859,
+      "X2": 0.9758234968325379,
+      "X3": 85.96485416304746,
+      "X4": 2.221460288956271
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "rerun": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1921,
+    "best_params": {
+      "X1": 262.6655514204859,
+      "X2": 0.9758234968325379,
+      "X3": 85.96485416304746,
+      "X4": 2.221460288956271
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "cache_lines": [
+    1921,
+    1921
+  ],
+  "cache_identical": true,
+  "identical": true
+}

@@ -1,0 +1,34 @@
+{
+ "tag": "sceua_b1000_s1",
+ "rows": [
+  907,
+  907
+ ],
+ "rows_identical": true,
+ "summary_same_except_wall": true,
+ "orig_summary": [
+  [
+   "sceua",
+   "1000",
+   "1",
+   "907",
+   "0.66207",
+   "0.59036",
+   "0.54149",
+   "152.4"
+  ]
+ ],
+ "rerun_summary": [
+  [
+   "sceua",
+   "1000",
+   "1",
+   "907",
+   "0.66207",
+   "0.59036",
+   "0.54149",
+   "227.0"
+  ]
+ ],
+ "identical": true
+}

@@ -1,0 +1,34 @@
+{
+ "tag": "random_b3000_s1",
+ "rows": [
+  3000,
+  3000
+ ],
+ "rows_identical": true,
+ "summary_same_except_wall": true,
+ "orig_summary": [
+  [
+   "random",
+   "3000",
+   "1",
+   "3000",
+   "0.61493",
+   "0.47443",
+   "0.38744",
+   "499.9"
+  ]
+ ],
+ "rerun_summary": [
+  [
+   "random",
+   "3000",
+   "1",
+   "3000",
+   "0.61493",
+   "0.47443",
+   "0.38744",
+   "740.9"
+  ]
+ ],
+ "identical": true
+}

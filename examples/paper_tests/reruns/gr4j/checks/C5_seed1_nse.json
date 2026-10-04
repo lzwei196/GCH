@@ -1,0 +1,50 @@
+{
+  "tag": "C5_seed1_nse",
+  "same": {
+    "status": true,
+    "algorithm": true,
+    "n_evaluations": true,
+    "best_params": true,
+    "best_value": true,
+    "best_metrics": true,
+    "objectives": true
+  },
+  "orig": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1302,
+    "best_params": {
+      "X1": 283.92165966794624,
+      "X2": 0.9914995980852734,
+      "X3": 83.4331309203635,
+      "X4": 2.20686975995315
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "rerun": {
+    "status": "completed",
+    "algorithm": "sceua",
+    "n_evaluations": 1302,
+    "best_params": {
+      "X1": 283.92165966794624,
+      "X2": 0.9914995980852734,
+      "X3": 83.4331309203635,
+      "X4": 2.20686975995315
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "cache_lines": [
+    1303,
+    1303
+  ],
+  "cache_identical": true,
+  "identical": true
+}

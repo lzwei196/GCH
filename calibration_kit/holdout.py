@@ -19,6 +19,10 @@ import math
 import os
 
 
+#: phases whose evaluations are VALIDATION, not search effort (phase_counts / the marker)
+VALIDATION_PHASES = ("holdout", "front_select")
+
+
 def _eval_split(evaluator, x, split):
     """Score `x` on an EXPLICIT split. This is the ONLY place allowed to override the TRAINING split, so
     it goes through `split_authority()` — IN-PROCESS authority (codex round-4); a bare KDT_CALIB_SPLIT
@@ -29,7 +33,24 @@ def _eval_split(evaluator, x, split):
 
 
 def validate_holdout(evaluator, objectives, best_x, spec: dict,
-                     probe_x=None, band_ceilings=None, baseline_x=None) -> dict:
+                     probe_x=None, band_ceilings=None, baseline_x=None,
+                     phase: str | None = None) -> dict:
+    """Phase-tagging wrapper (2026-09-27): validation evals are tagged `holdout`, so they are
+    never counted as search effort. A caller already inside a validation phase (front selection
+    gates many members) keeps its own tag; `phase=` overrides both. See _validate_holdout for
+    the gate itself."""
+    _ctx = getattr(evaluator, "phase_as", None)
+    if _ctx is None:                                   # a test double without the history layer
+        return _validate_holdout(evaluator, objectives, best_x, spec, probe_x=probe_x,
+                                 band_ceilings=band_ceilings, baseline_x=baseline_x)
+    _cur = getattr(evaluator, "phase", None)
+    with _ctx(phase or (_cur if _cur in VALIDATION_PHASES else "holdout")):
+        return _validate_holdout(evaluator, objectives, best_x, spec, probe_x=probe_x,
+                                 band_ceilings=band_ceilings, baseline_x=baseline_x)
+
+
+def _validate_holdout(evaluator, objectives, best_x, spec: dict,
+                      probe_x=None, band_ceilings=None, baseline_x=None) -> dict:
     """Compare best_x on the calibration vs holdout split. PASS iff no objective
     degrades beyond max_degradation on holdout (and stays finite) AND — when a
     convention pass-band is supplied for it — the held-out loss also MEETS that
@@ -216,6 +237,54 @@ def validate_holdout(evaluator, objectives, best_x, spec: dict,
                 "reason": "calibration rerun at best_x not reproducible/finite",
                 "kind": (spec or {}).get("kind"), "per_objective": per_obj}
 
+    # DECLARED PER-YEAR CRITERIA (System 1, codex S8 2026-08-30). A contract may declare, under
+    # strategy.holdout, the operational bar every held-out year must clear and a yield-slope
+    # floor over the held-out years; the runner supplies `__kdt__.per_year` (metrics + yields per
+    # year) on the holdout split. FAIL-CLOSED: declared but absent payload => inconclusive, never
+    # a pass. Kept separate from the per-objective rule above; the overall verdict needs BOTH.
+    declared = None
+    _py_spec = (spec or {}).get("per_year")
+    _slope_min = (spec or {}).get("yield_slope_min")
+    if _py_spec or _slope_min is not None:
+        _kdt = (_cal_hold_m or {}).get("__kdt__") or {}
+        per_year = _kdt.get("per_year") or {}
+        declared = {"per_year_rule": _py_spec, "yield_slope_min": _slope_min, "years": {}, "passed": True}
+        if not per_year:
+            return {"passed": None, "inconclusive": True,
+                    "reason": "contract declares per-year holdout criteria but the runner returned no __kdt__.per_year on the holdout split",
+                    "kind": (spec or {}).get("kind"), "per_objective": per_obj, "declared": declared}
+        # 2026-08-31 (user: the bar is a CITED convention band): `per_year: {band: good}` resolves nse_min and
+        # abs_pbias_max from the KI's docs/validation_convention.yaml; explicit numbers stay allowed.
+        if _py_spec and _py_spec.get("band") and "nse_min" not in _py_spec:
+            from .stop import convention_floor
+            _ki = getattr(evaluator, "ki_path", None)
+            _fl = convention_floor(str(_ki), str(_py_spec.get("main_stat", "nse")), str(_py_spec["band"]), _py_spec.get("dag_variable"))
+            _py_spec = {**_py_spec, "nse_min": _fl["value"], "abs_pbias_max": (_fl["pbias_max"] if _fl.get("pbias_max") is not None else 1e9),
+                        "resolved_from": _fl.get("source"), "cites": _fl.get("cites")}
+            declared["per_year_rule"] = _py_spec
+        nse_min = float((_py_spec or {}).get("nse_min", -1e9)); pb_max = float((_py_spec or {}).get("abs_pbias_max", 1e9))
+        for y, m in sorted(per_year.items()):
+            try:
+                n, p = float(m.get("nse")), float(m.get("pbias"))
+            except (TypeError, ValueError):
+                n, p = float("nan"), float("nan")
+            ok_y = bool(math.isfinite(n) and math.isfinite(p) and n >= nse_min and abs(p) <= pb_max) if _py_spec else True
+            declared["years"][y] = {"nse": n, "pbias": p, "ok": ok_y}
+            declared["passed"] = declared["passed"] and ok_y
+        if _slope_min is not None:
+            xs = [float(m["yield_obs"]) for m in per_year.values() if m.get("yield_obs") is not None and m.get("yield_sim") is not None]
+            ys = [float(m["yield_sim"]) for m in per_year.values() if m.get("yield_obs") is not None and m.get("yield_sim") is not None]
+            if len(xs) >= 3:
+                mx, my = sum(xs) / len(xs), sum(ys) / len(ys)
+                den = sum((x - mx) ** 2 for x in xs)
+                slope = (sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / den) if den > 0 else float("nan")
+                declared["yield_slope"] = {"slope_sim_on_obs": slope, "n": len(xs), "ok": bool(math.isfinite(slope) and slope >= float(_slope_min))}
+                declared["passed"] = declared["passed"] and declared["yield_slope"]["ok"]
+            else:
+                declared["yield_slope"] = {"error": "fewer than 3 years with yields — cannot judge the slope (fail-closed)", "ok": False}
+                declared["passed"] = False
+        passed = passed and declared["passed"]
+
     return {"passed": passed, "inconclusive": False,
             "kind": (spec or {}).get("kind"), "fraction": (spec or {}).get("fraction"),
-            "max_degradation": tol, "per_objective": per_obj}
+            "max_degradation": tol, "per_objective": per_obj, "declared": declared}

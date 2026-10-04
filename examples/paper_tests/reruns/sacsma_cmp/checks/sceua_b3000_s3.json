@@ -1,0 +1,34 @@
+{
+ "tag": "sceua_b3000_s3",
+ "rows": [
+  1957,
+  1957
+ ],
+ "rows_identical": true,
+ "summary_same_except_wall": true,
+ "orig_summary": [
+  [
+   "sceua",
+   "3000",
+   "3",
+   "1957",
+   "0.68546",
+   "0.58299",
+   "0.51849",
+   "335.6"
+  ]
+ ],
+ "rerun_summary": [
+  [
+   "sceua",
+   "3000",
+   "3",
+   "1957",
+   "0.68546",
+   "0.58299",
+   "0.51849",
+   "488.4"
+  ]
+ ],
+ "identical": true
+}

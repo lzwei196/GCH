@@ -1,5 +1,10 @@
 # Calibration Framework — Design (v2, 2026-07-08)
 
+> **Superseded in part (2026-09-30, build step 8):** the Morris screen, staged escalation and the old
+> calibratability triage described below were REMOVED. Which parameters to calibrate is decided once, by
+> the agent from the KI; the engine runs one search; triage is `no_baseline` / `not_calibratable` /
+> `calibrate` (CALIBRATION_YAML_SCHEMA.md C13; design HANDOFF_CONVERGENCE_2026-09-27_v2.md §1).
+
 A standalone, domain-general calibration framework parallel to self-improve, for all 400+ model KIs. This
 doc captures the v2 refinements: KI-as-execution-backbone, literature-grounded sensitivity/holdout, and the
 applicator-vs-runner injection split.

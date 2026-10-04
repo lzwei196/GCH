@@ -193,6 +193,15 @@ def objectives_from_dag(dag: dict, targets: list[dict] | None,
         if not fams:
             continue
         w_each = w / len(fams)        # split the target weight across its families
+        # 2026-08-30 (System 1 composite objective, declared): a target may weight its dag-valid
+        # families explicitly, e.g. {temporal_pattern_match: 1.0, magnitude_accuracy: 0.5,
+        # timing_accuracy: 0.6}. Only families the dag declares can be weighted; an unknown
+        # family name is an error, never silently ignored.
+        fw = t.get("family_weights")
+        if fw:
+            bad = sorted(set(fw) - set(fams))
+            if bad:
+                raise ValueError(f"target {var}: family_weights names {bad}, not among the dag-valid families {fams}")
         mo = {k: str(v).lower() for k, v in (metric_overrides or {}).items() if v}
         for fam in fams:
             key, _ = _FAMILY_LOSS[fam]
@@ -202,7 +211,7 @@ def objectives_from_dag(dag: dict, targets: list[dict] | None,
             if fam in mo:
                 key = mo[fam]
             objs.append(Objective(name=f"{var}:{fam}", var=var, family=fam,
-                                  metric_key=key, weight=w_each))
+                                  metric_key=key, weight=(w * float(fw[fam]) if fw and fam in fw else (0.0 if fw else w_each))))
     return objs
 
 

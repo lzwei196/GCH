@@ -1,0 +1,1 @@
+Round {round_id} review. Results: {results}. Reply with JSON: {"overall_assessment": "...", "worker_guidance": [{"subbasin_id": "gauge", "priority_focus": "...", "param_adjustments": [{"param": "...", "direction": "increase|decrease", "magnitude": "small|medium|large"}]}]}

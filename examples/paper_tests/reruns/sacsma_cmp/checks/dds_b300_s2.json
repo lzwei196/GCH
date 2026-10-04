@@ -1,0 +1,34 @@
+{
+ "tag": "dds_b300_s2",
+ "rows": [
+  300,
+  300
+ ],
+ "rows_identical": true,
+ "summary_same_except_wall": true,
+ "orig_summary": [
+  [
+   "dds",
+   "300",
+   "2",
+   "300",
+   "0.67147",
+   "0.56461",
+   "0.49733",
+   "51.2"
+  ]
+ ],
+ "rerun_summary": [
+  [
+   "dds",
+   "300",
+   "2",
+   "300",
+   "0.67147",
+   "0.56461",
+   "0.49733",
+   "75.6"
+  ]
+ ],
+ "identical": true
+}

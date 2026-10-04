@@ -1,0 +1,1665 @@
+{
+ "summary": {
+  "kind": "sce",
+  "tolerance": "boot",
+  "tol": {
+   "Q": {
+    "r": 0.04907674262517906,
+    "alpha": 0.09960959219146055,
+    "beta": 0.1449951464156727,
+    "lnnse": 0.13589584860494466
+   }
+  },
+  "tol_source": {
+   "r": "bootstrap",
+   "alpha": "bootstrap",
+   "beta": "bootstrap",
+   "lnnse": "bootstrap"
+  },
+  "seeds_judged": 59,
+  "counts": {
+   "premature": 1,
+   "safe": 58,
+   "undecidable": 0,
+   "no stop": 0,
+   "invalid": 0
+  },
+  "decidable": 59,
+  "cp95_upper": 0.0778979215188183,
+  "result": "FAIL",
+  "median_stop_step": 11.0,
+  "median_budget_share_saved": 0.6728195662205814,
+  "premature_cases": [
+   {
+    "run": "sce_s1018",
+    "calls": 12958,
+    "steps_after_start": 33,
+    "verdict_rule": "converged",
+    "stop_step": 7,
+    "stop_calls": 2734,
+    "stop_m": 5,
+    "ends_after": 26,
+    "largest_after": {
+     "loss:Q:nse": 0.007855289375580528,
+     "Q:r": 0.0015013996622288417,
+     "Q:alpha": 0.012068663992446882,
+     "Q:beta": 0.02445010219423316,
+     "Q:lnnse": 0.00816752607583715
+    },
+    "moved": [
+     [
+      "loss",
+      "Q:nse",
+      8,
+      0.006773342656852066
+     ],
+     [
+      "loss",
+      "Q:nse",
+      9,
+      0.006773342656852066
+     ],
+     [
+      "loss",
+      "Q:nse",
+      10,
+      0.006773342656852066
+     ],
+     [
+      "loss",
+      "Q:nse",
+      11,
+      0.007438627228047452
+     ],
+     [
+      "loss",
+      "Q:nse",
+      12,
+      0.007523962805995412
+     ],
+     [
+      "loss",
+      "Q:nse",
+      13,
+      0.007702539740019987
+     ],
+     [
+      "loss",
+      "Q:nse",
+      14,
+      0.00772551366545259
+     ],
+     [
+      "loss",
+      "Q:nse",
+      15,
+      0.0077817009267394915
+     ],
+     [
+      "loss",
+      "Q:nse",
+      16,
+      0.00782764330885467
+     ],
+     [
+      "loss",
+      "Q:nse",
+      17,
+      0.007844436263998517
+     ],
+     [
+      "loss",
+      "Q:nse",
+      18,
+      0.007844436263998517
+     ],
+     [
+      "loss",
+      "Q:nse",
+      19,
+      0.007847125310495933
+     ],
+     [
+      "loss",
+      "Q:nse",
+      20,
+      0.007850779455637247
+     ],
+     [
+      "loss",
+      "Q:nse",
+      21,
+      0.007853547351558767
+     ],
+     [
+      "loss",
+      "Q:nse",
+      22,
+      0.007853547351558767
+     ],
+     [
+      "loss",
+      "Q:nse",
+      23,
+      0.007854336196243154
+     ],
+     [
+      "loss",
+      "Q:nse",
+      24,
+      0.007854397309667102
+     ],
+     [
+      "loss",
+      "Q:nse",
+      25,
+      0.007855102222218123
+     ],
+     [
+      "loss",
+      "Q:nse",
+      26,
+      0.00785510918389138
+     ],
+     [
+      "loss",
+      "Q:nse",
+      27,
+      0.007855241836146075
+     ]
+    ],
+    "n_moved": 26,
+    "missing": [],
+    "judge": "premature",
+    "budget_share_saved": 0.7890106497916345,
+    "seed": 1018
+   }
+  ],
+  "invalid_runs": [],
+  "frozen_sha256": {
+   "rule_steps.py": "e3b1f5ef9ef4904f9cc3d2a9d2f849fccff1e91885e4a5f4b77a392350f3d7a6",
+   "rule.py": "5d5c844e924a1fe2b575f5a081b583f78b79f112f3f23bbf0506f71cf98e8079",
+   "panel.py": "032b1c78f3ff414cb17fbf1c86847e0fa312b51519b3160d80a4bb50c4e598fb"
+  }
+ },
+ "searches": [
+  {
+   "run": "sce_s1000",
+   "calls": 12999,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 4958,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 3.545567606933294e-05,
+    "Q:r": 3.0309650239201957e-05,
+    "Q:alpha": 0.001393081568778154,
+    "Q:beta": 0.0005264007133660709,
+    "Q:lnnse": 0.0012068709602043315
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6185860450803908,
+   "seed": 1000
+  },
+  {
+   "run": "sce_s1001",
+   "calls": 13041,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4648,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00021057346910274163,
+    "Q:r": 7.422705878490365e-05,
+    "Q:alpha": 0.0023411499184727846,
+    "Q:beta": 0.0017528344133508345,
+    "Q:lnnse": 0.00115082426871016
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6435856146001073,
+   "seed": 1001
+  },
+  {
+   "run": "sce_s1002",
+   "calls": 13064,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4640,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00012751573761876593,
+    "Q:r": 6.270775500738512e-05,
+    "Q:alpha": 0.00310269822579734,
+    "Q:beta": 0.0006144406034200856,
+    "Q:lnnse": 0.0014032977513793732
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6448254745866504,
+   "seed": 1002
+  },
+  {
+   "run": "sce_s1003",
+   "calls": 13019,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4247,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00026970048580085456,
+    "Q:r": 0.00011288688114097223,
+    "Q:alpha": 0.0019408179135333992,
+    "Q:beta": 0.002731644939070077,
+    "Q:lnnse": 0.0019102306598510754
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6737844688532145,
+   "seed": 1003
+  },
+  {
+   "run": "sce_s1004",
+   "calls": 13065,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4276,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00046903649955081124,
+    "Q:r": 0.0001452353033735143,
+    "Q:alpha": 0.008358078613845632,
+    "Q:beta": 0.0027583831528168457,
+    "Q:lnnse": 0.001601873933149367
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6727133562954459,
+   "seed": 1004
+  },
+  {
+   "run": "sce_s1005",
+   "calls": 12999,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 14,
+   "stop_calls": 5340,
+   "stop_m": 5,
+   "ends_after": 19,
+   "largest_after": {
+    "loss:Q:nse": 0.00012390698010400142,
+    "Q:r": 8.924577609514817e-05,
+    "Q:alpha": 0.0029659221320920137,
+    "Q:beta": 0.0004892585753151213,
+    "Q:lnnse": 0.002259158091139968
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.589199169166859,
+   "seed": 1005
+  },
+  {
+   "run": "sce_s1006",
+   "calls": 12994,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4254,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0005403727691118194,
+    "Q:r": 0.00010003762973109787,
+    "Q:alpha": 0.004249454363076888,
+    "Q:beta": 0.004771356466188648,
+    "Q:lnnse": 0.0025739805706801455
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6726181314452824,
+   "seed": 1006
+  },
+  {
+   "run": "sce_s1007",
+   "calls": 12965,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4616,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00018621334306225473,
+    "Q:r": 0.00010366267809391871,
+    "Q:alpha": 0.0041181126838290005,
+    "Q:beta": 0.0035436700992917958,
+    "Q:lnnse": 0.0023326965290645374
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6439645198611647,
+   "seed": 1007
+  },
+  {
+   "run": "sce_s1008",
+   "calls": 12988,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3886,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0004630167396274139,
+    "Q:r": 0.00019314310357931852,
+    "Q:alpha": 0.010190787238749888,
+    "Q:beta": 0.001585611747765614,
+    "Q:lnnse": 0.004600911588118262
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7008007391438251,
+   "seed": 1008
+  },
+  {
+   "run": "sce_s1009",
+   "calls": 13064,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4269,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0007025865316740413,
+    "Q:r": 0.00016884736746658469,
+    "Q:alpha": 0.009544455492480064,
+    "Q:beta": 0.002551281029422703,
+    "Q:lnnse": 0.003173449150597696
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6732241273729332,
+   "seed": 1009
+  },
+  {
+   "run": "sce_s1010",
+   "calls": 13003,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4577,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.0006570828080334039,
+    "Q:r": 0.00022741793005665034,
+    "Q:alpha": 0.006934298535649086,
+    "Q:beta": 0.0022436252944564306,
+    "Q:lnnse": 0.0012602421507161843
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6480043066984542,
+   "seed": 1010
+  },
+  {
+   "run": "sce_s1011",
+   "calls": 13013,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4244,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00015969260804202495,
+    "Q:r": 7.949081044456019e-05,
+    "Q:alpha": 0.003845150895374738,
+    "Q:beta": 0.0014320151423471428,
+    "Q:lnnse": 0.003412574197104168
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.67386459694152,
+   "seed": 1011
+  },
+  {
+   "run": "sce_s1012",
+   "calls": 12952,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4565,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00012183942476515143,
+    "Q:r": 9.23552002605188e-05,
+    "Q:alpha": 0.0030784413983820924,
+    "Q:beta": 0.0021541160221189015,
+    "Q:lnnse": 0.00248883196059424
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.647544780728845,
+   "seed": 1012
+  },
+  {
+   "run": "sce_s1013",
+   "calls": 12987,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4244,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0005441192441554939,
+    "Q:r": 0.00012894663333984369,
+    "Q:alpha": 0.00678219688604953,
+    "Q:beta": 0.001972862716833834,
+    "Q:lnnse": 0.004510493965657947
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6732116732116732,
+   "seed": 1013
+  },
+  {
+   "run": "sce_s1014",
+   "calls": 13007,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3861,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0010543549628007091,
+    "Q:r": 0.00030340770002768025,
+    "Q:alpha": 0.005294980114579295,
+    "Q:beta": 0.0014532937157354375,
+    "Q:lnnse": 0.002260527557423231
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7031598370108403,
+   "seed": 1014
+  },
+  {
+   "run": "sce_s1015",
+   "calls": 13065,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 5010,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 6.250589849646954e-05,
+    "Q:r": 3.404512696558726e-05,
+    "Q:alpha": 0.0006307688029076886,
+    "Q:beta": 0.0017189641969442837,
+    "Q:lnnse": 0.0005653276916264272
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.616532721010333,
+   "seed": 1015
+  },
+  {
+   "run": "sce_s1016",
+   "calls": 12953,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3825,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0014885618826972668,
+    "Q:r": 0.0004125305732516349,
+    "Q:alpha": 0.003902256219628586,
+    "Q:beta": 0.007024997597485649,
+    "Q:lnnse": 0.00709018256631988
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7047016135258242,
+   "seed": 1016
+  },
+  {
+   "run": "sce_s1017",
+   "calls": 12979,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4210,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0016755710414105385,
+    "Q:r": 0.0005812520636596652,
+    "Q:alpha": 0.014568377447194747,
+    "Q:beta": 0.004441762943592886,
+    "Q:lnnse": 0.003523804371087791
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6756298636258571,
+   "seed": 1017
+  },
+  {
+   "run": "sce_s1018",
+   "calls": 12958,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 7,
+   "stop_calls": 2734,
+   "stop_m": 5,
+   "ends_after": 26,
+   "largest_after": {
+    "loss:Q:nse": 0.007855289375580528,
+    "Q:r": 0.0015013996622288417,
+    "Q:alpha": 0.012068663992446882,
+    "Q:beta": 0.02445010219423316,
+    "Q:lnnse": 0.00816752607583715
+   },
+   "moved": [
+    [
+     "loss",
+     "Q:nse",
+     8,
+     0.006773342656852066
+    ],
+    [
+     "loss",
+     "Q:nse",
+     9,
+     0.006773342656852066
+    ],
+    [
+     "loss",
+     "Q:nse",
+     10,
+     0.006773342656852066
+    ],
+    [
+     "loss",
+     "Q:nse",
+     11,
+     0.007438627228047452
+    ],
+    [
+     "loss",
+     "Q:nse",
+     12,
+     0.007523962805995412
+    ],
+    [
+     "loss",
+     "Q:nse",
+     13,
+     0.007702539740019987
+    ],
+    [
+     "loss",
+     "Q:nse",
+     14,
+     0.00772551366545259
+    ],
+    [
+     "loss",
+     "Q:nse",
+     15,
+     0.0077817009267394915
+    ],
+    [
+     "loss",
+     "Q:nse",
+     16,
+     0.00782764330885467
+    ],
+    [
+     "loss",
+     "Q:nse",
+     17,
+     0.007844436263998517
+    ],
+    [
+     "loss",
+     "Q:nse",
+     18,
+     0.007844436263998517
+    ],
+    [
+     "loss",
+     "Q:nse",
+     19,
+     0.007847125310495933
+    ],
+    [
+     "loss",
+     "Q:nse",
+     20,
+     0.007850779455637247
+    ],
+    [
+     "loss",
+     "Q:nse",
+     21,
+     0.007853547351558767
+    ],
+    [
+     "loss",
+     "Q:nse",
+     22,
+     0.007853547351558767
+    ],
+    [
+     "loss",
+     "Q:nse",
+     23,
+     0.007854336196243154
+    ],
+    [
+     "loss",
+     "Q:nse",
+     24,
+     0.007854397309667102
+    ],
+    [
+     "loss",
+     "Q:nse",
+     25,
+     0.007855102222218123
+    ],
+    [
+     "loss",
+     "Q:nse",
+     26,
+     0.00785510918389138
+    ],
+    [
+     "loss",
+     "Q:nse",
+     27,
+     0.007855241836146075
+    ]
+   ],
+   "n_moved": 26,
+   "missing": [],
+   "judge": "premature",
+   "budget_share_saved": 0.7890106497916345,
+   "seed": 1018
+  },
+  {
+   "run": "sce_s1019",
+   "calls": 13060,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4245,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00041302330428706104,
+    "Q:r": 6.59328908642065e-05,
+    "Q:alpha": 0.0013069907865224106,
+    "Q:beta": 0.0018476237245266258,
+    "Q:lnnse": 0.0037423598573894656
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6749617151607963,
+   "seed": 1019
+  },
+  {
+   "run": "sce_s1020",
+   "calls": 13039,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4622,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00027287089282574783,
+    "Q:r": 0.00012324392916207572,
+    "Q:alpha": 0.0016850864257407228,
+    "Q:beta": 0.003044483572189116,
+    "Q:lnnse": 0.0017500466123727687
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.645524963570826,
+   "seed": 1020
+  },
+  {
+   "run": "sce_s1021",
+   "calls": 13051,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 5037,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 8.111806265742873e-05,
+    "Q:r": 3.1093322343744845e-05,
+    "Q:alpha": 0.0014233596447766894,
+    "Q:beta": 0.0015353253422060176,
+    "Q:lnnse": 0.000987361760018235
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6140525630219906,
+   "seed": 1021
+  },
+  {
+   "run": "sce_s1022",
+   "calls": 12961,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4211,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0011453984573540608,
+    "Q:r": 0.00018949565802006685,
+    "Q:alpha": 0.007155832443285215,
+    "Q:beta": 0.00411944861869129,
+    "Q:lnnse": 0.004788945701147518
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6751022297662217,
+   "seed": 1022
+  },
+  {
+   "run": "sce_s1023",
+   "calls": 13027,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4623,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00030304912790952315,
+    "Q:r": 0.00018724138373149568,
+    "Q:alpha": 0.005289989720531962,
+    "Q:beta": 0.003075914170918792,
+    "Q:lnnse": 0.0033391936482490836
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6451216703769095,
+   "seed": 1023
+  },
+  {
+   "run": "sce_s1024",
+   "calls": 13032,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4235,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0003980765242268746,
+    "Q:r": 0.00018525475146624615,
+    "Q:alpha": 0.003019446488162547,
+    "Q:beta": 0.00456125701807597,
+    "Q:lnnse": 0.0015724247846550243
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6750306936771024,
+   "seed": 1024
+  },
+  {
+   "run": "sce_s1025",
+   "calls": 13048,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4610,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.0003275202830413023,
+    "Q:r": 0.00015615693822423893,
+    "Q:alpha": 0.004108239247093137,
+    "Q:beta": 0.002018647639932758,
+    "Q:lnnse": 0.0012700390699140751
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6466891477621091,
+   "seed": 1025
+  },
+  {
+   "run": "sce_s1026",
+   "calls": 13047,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4600,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00023792060343236457,
+    "Q:r": 8.729676412777554e-05,
+    "Q:alpha": 0.0053754979990261464,
+    "Q:beta": 0.0006658897435820599,
+    "Q:lnnse": 0.001145412597623352
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.647428527630873,
+   "seed": 1026
+  },
+  {
+   "run": "sce_s1027",
+   "calls": 13045,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 4995,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 0.00017702002232622597,
+    "Q:r": 0.00010228774748755054,
+    "Q:alpha": 0.003063835959264516,
+    "Q:beta": 0.0029990116038127734,
+    "Q:lnnse": 0.00331313850232684
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6170946722882331,
+   "seed": 1027
+  },
+  {
+   "run": "sce_s1028",
+   "calls": 12984,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4231,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0008305590718399954,
+    "Q:r": 0.00032977564398128933,
+    "Q:alpha": 0.01198359949042005,
+    "Q:beta": 0.0012430767307676227,
+    "Q:lnnse": 0.0021050414954163488
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6741373998767715,
+   "seed": 1028
+  },
+  {
+   "run": "sce_s1029",
+   "calls": 13049,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4242,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0010076917539506322,
+    "Q:r": 0.00011945137153912544,
+    "Q:alpha": 0.006456712562458278,
+    "Q:beta": 0.0027902970031963292,
+    "Q:lnnse": 0.002072493747183879
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6749176182082919,
+   "seed": 1029
+  },
+  {
+   "run": "sce_s1030",
+   "calls": 12981,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4203,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0011228885511011884,
+    "Q:r": 0.00016941726895791653,
+    "Q:alpha": 0.012972729280639306,
+    "Q:beta": 0.0019383458638536633,
+    "Q:lnnse": 0.004991797667211806
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6762190894384099,
+   "seed": 1030
+  },
+  {
+   "run": "sce_s1031",
+   "calls": 12962,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4576,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00026170488965924116,
+    "Q:r": 0.00015437400520834643,
+    "Q:alpha": 0.008217677830233083,
+    "Q:beta": 0.0011610762563494248,
+    "Q:lnnse": 0.0031964974483863484
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6469680604844932,
+   "seed": 1031
+  },
+  {
+   "run": "sce_s1032",
+   "calls": 13043,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3901,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.001386329282578109,
+    "Q:r": 0.0002987604927903176,
+    "Q:alpha": 0.008010570228434877,
+    "Q:beta": 0.005526317669694802,
+    "Q:lnnse": 0.00414249076823614
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7009123667867823,
+   "seed": 1032
+  },
+  {
+   "run": "sce_s1033",
+   "calls": 13010,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3852,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0007821460488996146,
+    "Q:r": 0.0003591232914887943,
+    "Q:alpha": 0.017501303003898516,
+    "Q:beta": 0.002640134623568602,
+    "Q:lnnse": 0.006714203307188749
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7039200614911607,
+   "seed": 1033
+  },
+  {
+   "run": "sce_s1034",
+   "calls": 13025,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4678,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00037655553730276276,
+    "Q:r": 9.298095621890212e-05,
+    "Q:alpha": 0.0026473721780896353,
+    "Q:beta": 0.003816775611717671,
+    "Q:lnnse": 0.0014465670858219148
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6408445297504799,
+   "seed": 1034
+  },
+  {
+   "run": "sce_s1035",
+   "calls": 12754,
+   "steps_after_start": 32,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4305,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.0006221061473999558,
+    "Q:r": 0.0002926515389626294,
+    "Q:alpha": 0.008798420183239286,
+    "Q:beta": 0.0023457771060002575,
+    "Q:lnnse": 0.0028662760376511054
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6624588364434687,
+   "seed": 1035
+  },
+  {
+   "run": "sce_s1036",
+   "calls": 13008,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3875,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0006039839802646235,
+    "Q:r": 0.00024352263346139047,
+    "Q:alpha": 0.003073481397478095,
+    "Q:beta": 0.0039123221529792085,
+    "Q:lnnse": 0.004554634650369094
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7021063960639606,
+   "seed": 1036
+  },
+  {
+   "run": "sce_s1037",
+   "calls": 13002,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4224,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0003541831099165113,
+    "Q:r": 0.0002251883714028402,
+    "Q:alpha": 0.008960939602233986,
+    "Q:beta": 0.0015484017489564295,
+    "Q:lnnse": 0.006825662398318055
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6751269035532995,
+   "seed": 1037
+  },
+  {
+   "run": "sce_s1038",
+   "calls": 12985,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 4967,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 8.373916672714962e-05,
+    "Q:r": 8.719225318332136e-05,
+    "Q:alpha": 0.0021507351470686498,
+    "Q:beta": 0.002316754552370681,
+    "Q:lnnse": 0.001869223871917347
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.617481709664998,
+   "seed": 1038
+  },
+  {
+   "run": "sce_s1039",
+   "calls": 12825,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4254,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0004562084773033593,
+    "Q:r": 6.753167643880342e-05,
+    "Q:alpha": 0.004672737545136307,
+    "Q:beta": 0.0010760755630404573,
+    "Q:lnnse": 0.004214396077411586
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6683040935672515,
+   "seed": 1039
+  },
+  {
+   "run": "sce_s1040",
+   "calls": 12989,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 5002,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 0.00018494140765756617,
+    "Q:r": 4.965253458544261e-05,
+    "Q:alpha": 0.002303114909951054,
+    "Q:beta": 0.001803922347693332,
+    "Q:lnnse": 0.0021752568314264975
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6149049195473093,
+   "seed": 1040
+  },
+  {
+   "run": "sce_s1041",
+   "calls": 13003,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3862,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0010445320424852995,
+    "Q:r": 0.0001262751038982879,
+    "Q:alpha": 0.011768558318163369,
+    "Q:beta": 0.00307395141247202,
+    "Q:lnnse": 0.0023549738872052917
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7029916173190802,
+   "seed": 1041
+  },
+  {
+   "run": "sce_s1042",
+   "calls": 13023,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4251,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0005542187001365629,
+    "Q:r": 5.950427584611173e-05,
+    "Q:alpha": 0.00392631414850797,
+    "Q:beta": 0.0011445075910981872,
+    "Q:lnnse": 0.0031114531820142233
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6735775167012209,
+   "seed": 1042
+  },
+  {
+   "run": "sce_s1043",
+   "calls": 13036,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 4998,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 0.00013837626793250038,
+    "Q:r": 5.906336598671125e-05,
+    "Q:alpha": 0.0008126959181607996,
+    "Q:beta": 0.0009134601532516662,
+    "Q:lnnse": 0.0031528311028333755
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6166001841055538,
+   "seed": 1043
+  },
+  {
+   "run": "sce_s1044",
+   "calls": 13005,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4255,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0006231544010420046,
+    "Q:r": 0.00011202138268140427,
+    "Q:alpha": 0.005462585008452092,
+    "Q:beta": 0.0028435113965633585,
+    "Q:lnnse": 0.0024819641107087786
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6728181468665897,
+   "seed": 1044
+  },
+  {
+   "run": "sce_s1045",
+   "calls": 13034,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3895,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.00032438449571024986,
+    "Q:r": 0.0001322005890240785,
+    "Q:alpha": 0.0038685400884855836,
+    "Q:beta": 0.0022819458966819584,
+    "Q:lnnse": 0.0031285182010274415
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7011661807580175,
+   "seed": 1045
+  },
+  {
+   "run": "sce_s1046",
+   "calls": 13036,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4613,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00030793974169408405,
+    "Q:r": 5.875651920683733e-05,
+    "Q:alpha": 0.0020565121565156996,
+    "Q:beta": 0.0010296400264022676,
+    "Q:lnnse": 0.001845718672893737
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6461337833691316,
+   "seed": 1046
+  },
+  {
+   "run": "sce_s1047",
+   "calls": 13014,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4575,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.0002568146448770478,
+    "Q:r": 4.3082444017739085e-05,
+    "Q:alpha": 0.0019210337531601063,
+    "Q:beta": 0.001793609158469489,
+    "Q:lnnse": 0.001014941017092541
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6484555094513601,
+   "seed": 1047
+  },
+  {
+   "run": "sce_s1048",
+   "calls": 13060,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4249,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0009078679083838676,
+    "Q:r": 0.0002528675986366302,
+    "Q:alpha": 0.0029278369687764094,
+    "Q:beta": 0.001566746850599876,
+    "Q:lnnse": 0.0044210148457526355
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6746554364471669,
+   "seed": 1048
+  },
+  {
+   "run": "sce_s1049",
+   "calls": 12922,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3861,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0007266803780642245,
+    "Q:r": 0.00015531504875898605,
+    "Q:alpha": 0.002408865139126304,
+    "Q:beta": 0.002897784553089866,
+    "Q:lnnse": 0.004060757036447149
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7012072434607646,
+   "seed": 1049
+  },
+  {
+   "run": "sce_s1050",
+   "calls": 13029,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3880,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0007761351331413795,
+    "Q:r": 0.00019321818649753464,
+    "Q:alpha": 0.006705645480484801,
+    "Q:beta": 0.009588221888918391,
+    "Q:lnnse": 0.005437190414597115
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7022027784173765,
+   "seed": 1050
+  },
+  {
+   "run": "sce_s1051",
+   "calls": 13002,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4254,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00043169908233546555,
+    "Q:r": 0.00016552419995252698,
+    "Q:alpha": 0.0051931237862261614,
+    "Q:beta": 0.0011774347033013388,
+    "Q:lnnse": 0.0016244033826611215
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6728195662205814,
+   "seed": 1051
+  },
+  {
+   "run": "sce_s1052",
+   "calls": 13003,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4233,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.00030428120189307246,
+    "Q:r": 0.00011537794413918334,
+    "Q:alpha": 0.005123001778533753,
+    "Q:beta": 0.001682097344422373,
+    "Q:lnnse": 0.0036783574887783166
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6744597400599861,
+   "seed": 1052
+  },
+  {
+   "run": "sce_s1053",
+   "calls": 13051,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4614,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.0001696516150271766,
+    "Q:r": 8.824481246183513e-05,
+    "Q:alpha": 0.005518821274431707,
+    "Q:beta": 0.0008419612101296936,
+    "Q:lnnse": 0.002133960078591013
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6464638725001915,
+   "seed": 1053
+  },
+  {
+   "run": "sce_s1054",
+   "calls": 12975,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 11,
+   "stop_calls": 4216,
+   "stop_m": 5,
+   "ends_after": 22,
+   "largest_after": {
+    "loss:Q:nse": 0.0008085530987257534,
+    "Q:r": 0.000198417576449339,
+    "Q:alpha": 0.0029007480524314566,
+    "Q:beta": 0.003459094846898214,
+    "Q:lnnse": 0.002750240127264436
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6750674373795761,
+   "seed": 1054
+  },
+  {
+   "run": "sce_s1055",
+   "calls": 12939,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 13,
+   "stop_calls": 4967,
+   "stop_m": 5,
+   "ends_after": 20,
+   "largest_after": {
+    "loss:Q:nse": 0.00024972531823664164,
+    "Q:r": 7.203415105572208e-05,
+    "Q:alpha": 0.0020855387182734386,
+    "Q:beta": 0.0008282655499887159,
+    "Q:lnnse": 0.0009539045813033997
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6161218023031146,
+   "seed": 1055
+  },
+  {
+   "run": "sce_s1056",
+   "calls": 13035,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3856,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0007625894500677188,
+    "Q:r": 0.00022055133405196603,
+    "Q:alpha": 0.003622780923137392,
+    "Q:beta": 0.0050885527005331,
+    "Q:lnnse": 0.005151263622485747
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7041810510164941,
+   "seed": 1056
+  },
+  {
+   "run": "sce_s1057",
+   "calls": 13014,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 12,
+   "stop_calls": 4634,
+   "stop_m": 5,
+   "ends_after": 21,
+   "largest_after": {
+    "loss:Q:nse": 0.00028647934942448844,
+    "Q:r": 4.574442261007228e-05,
+    "Q:alpha": 0.0012554206486687924,
+    "Q:beta": 0.001302142558464392,
+    "Q:lnnse": 0.0021505622137245606
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.6439219302289843,
+   "seed": 1057
+  },
+  {
+   "run": "sce_s1058",
+   "calls": 12965,
+   "steps_after_start": 33,
+   "verdict_rule": "converged",
+   "stop_step": 10,
+   "stop_calls": 3847,
+   "stop_m": 5,
+   "ends_after": 23,
+   "largest_after": {
+    "loss:Q:nse": 0.0012739736438963604,
+    "Q:r": 0.0001925998630463166,
+    "Q:alpha": 0.00368666748005686,
+    "Q:beta": 0.0015203710396920478,
+    "Q:lnnse": 0.008385522116745259
+   },
+   "moved": [],
+   "n_moved": 0,
+   "missing": [],
+   "judge": "safe",
+   "budget_share_saved": 0.7032780563054377,
+   "seed": 1058
+  }
+ ]
+}

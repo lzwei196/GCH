@@ -37,6 +37,15 @@ class CalibResult:
     backend: str = ""
     notes: str = ""
     posterior: dict | None = None      # per-parameter posterior summary (DREAM only; None otherwise)
+    stopped_early: bool = False        # the kit's hook ended the search (calib.py overwrites it: True only for our rule)
+    #: why the OPTIMIZER itself ended, in its own terms — SCE-UA's printed verdict, NSGA-II's
+    #: front-convergence observer, DDS's fixed schedule. A budget number alone never said whether
+    #: a search finished or was cut off (2026-09-27, convergence work).
+    termination: dict | None = None
+
+
+class EarlyStop(Exception):
+    """Raised inside a backend's evaluation callback to end the search (the kit's hook decided)."""
 
 
 class Backend:
@@ -47,6 +56,9 @@ class Backend:
 
     def optimize(self, problem: Problem, budget: int, seed: int = 0,
                  **kw) -> CalibResult:
+        """kw may carry `on_eval(history) -> bool`: called after every evaluation; True ends
+        the search (the kit's hook: cap or stop mode). Backends that cannot interrupt their library ignore it
+        and the cap applies."""
         raise NotImplementedError
 
     @staticmethod

@@ -1,0 +1,34 @@
+{
+ "tag": "random_b300_s2",
+ "rows": [
+  300,
+  300
+ ],
+ "rows_identical": true,
+ "summary_same_except_wall": true,
+ "orig_summary": [
+  [
+   "random",
+   "300",
+   "2",
+   "300",
+   "0.60971",
+   "0.56423",
+   "0.52766",
+   "50.1"
+  ]
+ ],
+ "rerun_summary": [
+  [
+   "random",
+   "300",
+   "2",
+   "300",
+   "0.60971",
+   "0.56423",
+   "0.52766",
+   "73.7"
+  ]
+ ],
+ "identical": true
+}

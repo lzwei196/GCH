@@ -1,0 +1,49 @@
+{
+  "same": {
+    "status": true,
+    "algorithm": true,
+    "n_evaluations": true,
+    "best_params": true,
+    "best_value": true,
+    "best_metrics": true,
+    "objectives": true
+  },
+  "orig": {
+    "status": "completed",
+    "algorithm": "dds",
+    "n_evaluations": 1000,
+    "best_params": {
+      "X1": 253.65235602357572,
+      "X2": 0.9711171905371221,
+      "X3": 87.55178386604949,
+      "X4": 2.2129478887060245
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "rerun": {
+    "status": "completed",
+    "algorithm": "dds",
+    "n_evaluations": 1000,
+    "best_params": {
+      "X1": 253.65235602357572,
+      "X2": 0.9711171905371221,
+      "X3": 87.55178386604949,
+      "X4": 2.2129478887060245
+    },
+    "best_value": null,
+    "best_metrics": null,
+    "objectives": [
+      "Qsim:temporal_pattern_match"
+    ]
+  },
+  "cache_lines": [
+    977,
+    977
+  ],
+  "cache_identical": true,
+  "identical": true
+}

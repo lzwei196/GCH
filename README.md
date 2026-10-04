@@ -1,69 +1,43 @@
-# Agent-Driven Calibration Framework
+# GCH — a general calibration harness for process-based models
 
-A **model-agnostic** autonomous calibration framework. Given a physical model's
-**Knowledge Infrastructure (KI)** — its documented observables, parameters, and run
-tools — an LLM agent **authors a standalone calibration pipeline**
-(`calibration.yaml` + `tools/calib_run.py`) that then runs *without the agent*. A
-fixed engine supplies all the numerical machinery, so the agent never writes an
-optimizer — it only **chooses and configures** one by reasoning about the problem.
+GCH lets a language-model agent **formulate** a model calibration — which parameters, how simulated outputs map onto
+observations, which metrics and acceptance levels, which optimizer and budget — as a written **contract**
+(`calibration.yaml`) and **runner** (`tools/calib_run.py`), drawn from and checked against the model's Knowledge
+Infrastructure (KI). A fixed, model-agnostic **engine** then does the numerical search without the agent: it checks
+every candidate, searches with a conventional optimizer, gates the result on held-out data and says whether the
+search converged. This is the framework called GCH in the GRL manuscript "Delegating calibration formulation to
+language model agents".
 
-## Two layers
+**Start here: [USAGE.md](USAGE.md).**
 
-1. **Engine — `calibration_kit/`** (fixed, model-agnostic, self-contained)
-   - a Morris **sensitivity screen**
-   - four optimizer backends: **DDS / SCE-UA / DREAM** (via `spotpy`) and **NSGA-II**
-     (via `pymoo`); optional PEST++ / surrogate backends
-   - a fail-closed, per-objective, **out-of-sample holdout gate** (correlation floor,
-     magnitude backstop, beats-baseline) that returns an honest
-     **promotable / not-promotable** verdict — the framework knows when *not* to
-     promote (or not to calibrate) a result.
+## Layout
 
-2. **Authoring — `authoring/`** (the calib-dev agent, shown as reference)
-   - given a KI + a target case, an LLM authors the `calibration.yaml` (parameter pool
-     + literature-grounded ranges + targets + **optimizer choice + rationale** + strategy)
-     and `tools/calib_run.py` (inject params → run the model's own tools → score → emit
-     metrics). The agent **reasons the optimizer from problem structure** — single- vs
-     multi-objective, cost per eval, and whether parameter *uncertainty* is the deliverable
-     — never a fixed default.
-   - *This layer spawns LLM / codex CLI agents; it is included here as the authoring
-     contract + prompt reference and depends on the host environment's agent-spawning
-     helper (`orchestrator`).* The engine below runs fully without it.
+| folder | what |
+|---|---|
+| `calibration_kit/` | the engine (self-contained): contract loading, parameter checks, pilot runs and budget, optimizer backends (SPOTPY DDS / SCE-UA / DREAM, pymoo NSGA-II / NSGA-III / MOEA-D, optional PEST++ / surrogate), score panel, convergence rules, seeds, holdout gate, replay; tests |
+| `authoring/` | the agent side (reference): how a calibration agent authors the contract and runner from a KI; depends on the host's agent-spawning helper |
+| `examples/paper_tests/` | drivers, pre-registrations and result summaries of the tests behind the GRL paper |
 
-## Engine usage
+## Convergence, in one table
 
-```python
-from calibration_kit import calib
+| optimizer | the kit's rule (its own, on our scores) | validated |
+|---|---|---|
+| SCE-UA | SPOTPY's loop-end test on the objective and watched scores (kstop 10, pcento 0.1, peps 0.001) | 0 premature / 59 |
+| NSGA-II / III, MOEA-D | pymoo's DefaultMultiObjectiveTermination, recorded | not validated (never fired in 200 tests) |
+| DDS | settle point "settled by run N of M" | descriptive |
+| DREAM | R-hat < 1.2 | — |
 
-report = calib.calibrate(
-    ki_path="/path/to/model_KI",            # holds calibration.yaml + tools/calib_run.py
-    workdir="/tmp/run",
-    obs_shape_by_var={"Q": "point_time_series"},
-    budget=300, seed=0,
-)
-report["promotable"]        # honest out-of-sample gate verdict
-report["best_params"]       # committed parameter vector
-```
+`strategy.convergence.mode: keep_going` records the rule, `stop` lets it end the search. Details in USAGE.md §4.
 
-- Force a specific optimizer with `KDT_CALIB_ALGO=dds|sceua|dream|nsga2`.
-- Per-eval hang guard: `KDT_CALIB_EVAL_TIMEOUT=<seconds>`.
-- Multi-objective Pareto commit uses an exhaustive, holdout-gated minimax selection
-  (`KDT_CALIB_FRONT_SELECT=1`).
+## Design documents
 
-## The authoring contract
-
-An authored pipeline follows **`calibration_kit/CALIBRATION_YAML_SCHEMA.md`**. The runner
-receives params as a **file path** (`KDT_CALIB_PARAMS`), injects them the model's own way,
-echoes `__kdt__.applied_params` (verified fail-closed every eval), and emits **var-scoped**
-metrics. The engine probes the runner and drops any declared objective it doesn't emit.
-
-## Dependencies
-
-`numpy`, `spotpy` (DDS/SCE-UA/DREAM), `pymoo` (NSGA-II), `pyyaml`. Optional: `pyemu`/PEST++
-and a surrogate backend. *Detached-eval mode additionally needs the host `orchestrator`;
-the default in-process / subprocess eval modes are fully self-contained.*
-
-## Design docs
-
-- `calibration_kit/CALIBRATION_FRAMEWORK_DESIGN.md` — architecture & rationale
-- `calibration_kit/CALIBRATION_YAML_SCHEMA.md` — the authoring contract
+- `calibration_kit/CALIBRATION_YAML_SCHEMA.md` — the contract (every field)
+- `calibration_kit/CALIBRATION_FRAMEWORK_DESIGN.md` — architecture and rationale
 - `calibration_kit/calibration.example.yaml` — a worked contract
+- `calibration_kit/backends/sceua_hooked.py` — the kit's copy of SPOTPY 1.6.7 SCE-UA with a loop-end hook (MIT)
+
+## Status
+
+Private research code. Version history: the engine is developed in the Knowledge Dissection Toolkit
+(`calibration_kit/`, branch `convergence-panel-2026-09`, commit `a5bdb16`). The code the paper's experiments ran on
+is the frozen copy in the study record (toolkit commit `8acd3d7`, archived 2026-09-07).
