@@ -1,0 +1,377 @@
+{
+  "schema": 1,
+  "path_base": "package root",
+  "cases": [
+    {
+      "case": "01_WOFOST",
+      "study": "Experiment 1; six-model WOFOST/KBS",
+      "package_directory": "04_research_archive/record/environments/01_WOFOST",
+      "instructions": "04_research_archive/record/environments/01_WOFOST/RERUN.md",
+      "runtime_dependencies": "Python 3.12; pcse==6.0.12; numpy; pandas",
+      "setup_conditions": "Stage cells/ and .pcse crop cache; restore imported KI paths.",
+      "saved_replay_evidence": "Metrics match two designated default-vector caches.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/01_WOFOST/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 31,
+      "manifest_sha256": "0788d814d39faa0e6f072055394399e3903dc176e9a431abf857ceb6c8f9a251",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/01_WOFOST/files/home",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        },
+        {
+          "payload_prefix": "04_research_archive/record/environments/01_WOFOST/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "02_HBV",
+      "study": "Experiment 1; six-model HBV/Moyie",
+      "package_directory": "04_research_archive/record/environments/02_HBV",
+      "instructions": "04_research_archive/record/environments/02_HBV/RERUN.md",
+      "runtime_dependencies": "Python 3.12; HBV==1.5.2; numpy; pandas; xarray; h5netcdf",
+      "setup_conditions": "Restore hard-coded /tmp forcing and observation paths; include shipped HBV package parent on PYTHONPATH.",
+      "saved_replay_evidence": "All metrics match; saved wall time differs.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/02_HBV/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 68,
+      "manifest_sha256": "2e3cf975b03842c6764261d8732d7c530a0fa0614f7954ef63360b3e1c06e7dd",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/02_HBV/files/home",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        },
+        {
+          "payload_prefix": "04_research_archive/record/environments/02_HBV/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        },
+        {
+          "payload_prefix": "04_research_archive/record/environments/02_HBV/files/tmp",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "03_SUMMA",
+      "study": "Experiment 1; six-model SUMMA/Moyie",
+      "package_directory": "04_research_archive/record/environments/03_SUMMA",
+      "instructions": "04_research_archive/record/environments/03_SUMMA/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; netCDF4/xarray; Linux netCDF/HDF5/LAPACK/OpenBLAS",
+      "setup_conditions": "Restore files paths and outputs alias; replay with recorded floating-point vector.",
+      "saved_replay_evidence": "Recorded-vector metrics match recursively; clean defaults differ in last digits.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/03_SUMMA/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 93,
+      "manifest_sha256": "9fa273bfaf63b47ad7a8cfdfe1b994c090c0923c242fc6512eaf2fd365e72f23",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/03_SUMMA/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [
+        {}
+      ],
+      "binaries": [
+        {
+          "case": "03_SUMMA",
+          "package_path": "04_research_archive/record/environments/03_SUMMA/files/mnt/disk1/Hydrocraft_server/model/summa/bin/summa.exe",
+          "format": "Linux x86-64 ELF",
+          "sha256": "cf2f7144b4ec2c23f089a5174db2530ebd8471561a9e7870aea36ba3c7a22be3"
+        },
+        {
+          "case": "03_SUMMA",
+          "package_path": "04_research_archive/record/environments/03_SUMMA/files/mnt/disk1/Hydrocraft_server/model/summa/build/cmake/cmake_build/libsumma.so",
+          "format": "Linux x86-64 ELF",
+          "sha256": "565aa46b12ccd6473b560714b9a0911bbd8a66422c954a471928fdae9c32594a"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "04_VIC",
+      "study": "Experiment 1; six-model VIC/Xixian",
+      "package_directory": "04_research_archive/record/environments/04_VIC",
+      "instructions": "04_research_archive/record/environments/04_VIC/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; Linux glibc/libgfortran",
+      "setup_conditions": "Restore files paths; /dev/shm staging.",
+      "saved_replay_evidence": "Metrics match; two provenance fields and wall time differ.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/04_VIC/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 163,
+      "manifest_sha256": "b1391f1e8fe619af1f79e8f79737a25a4141ab3abd14ed4c5662b1ec4385d8e9",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/04_VIC/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "04_VIC",
+          "package_path": "04_research_archive/record/environments/04_VIC/files/mnt/disk1/Hydrocraft_server/model/route_1.0/src/rout",
+          "format": "Linux x86-64 ELF",
+          "sha256": "2559f97ffcd8b9dcf31c7a70eaccd5ff24fe678ddd2c223f4cd6b1eb679a4ce3"
+        },
+        {
+          "case": "04_VIC",
+          "package_path": "04_research_archive/record/environments/04_VIC/files/mnt/disk1/Hydrocraft_server/model/VIC-5.1.0/vic/drivers/classic/vic_classic.exe",
+          "format": "Linux x86-64 ELF",
+          "sha256": "ddeaf92b61d6516c5148924beed55dcec3358a46f274662cf76c0f3bbc8fe540"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "05_MODFLOW6",
+      "study": "Experiment 1; MODFLOW6/Sagehen",
+      "package_directory": "04_research_archive/record/environments/05_MODFLOW6",
+      "instructions": "04_research_archive/record/environments/05_MODFLOW6/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; flopy==3.10.0 recorded; Linux glibc/libgfortran",
+      "setup_conditions": "Restore MF6 binary/input paths; approximately 1.4 GB RAM for one evaluation.",
+      "saved_replay_evidence": "Metrics and health counters match recursively.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/05_MODFLOW6/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 37,
+      "manifest_sha256": "92d24990d11b6e6b5f68406dc67f424a6b4dbad6c80d71ae52c7190a057196d4",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/05_MODFLOW6/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "05_MODFLOW6",
+          "package_path": "04_research_archive/record/environments/05_MODFLOW6/files/mnt/disk1/Hydrocraft_server/models/MODFLOW6/bin/mf6",
+          "format": "Linux x86-64 ELF",
+          "sha256": "b0e4f30e0bde8ae19f7541e55edeed74bb98f7a6bb5b6ce4c2879a0d2b7c5961"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "06_CRHM",
+      "study": "Experiment 1; CRHM/Blue River",
+      "package_directory": "04_research_archive/record/environments/06_CRHM",
+      "instructions": "04_research_archive/record/environments/06_CRHM/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; Linux glibc/libstdc++",
+      "setup_conditions": "Restore files paths and outputs alias.",
+      "saved_replay_evidence": "Metrics match; path fields and parameter echoes differ.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/06_CRHM/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 25,
+      "manifest_sha256": "8af7030cf59c15b670d620f889730dfa6fc68637c25f97bd7134290a136d501a",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/06_CRHM/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [
+        {}
+      ],
+      "binaries": [
+        {
+          "case": "06_CRHM",
+          "package_path": "04_research_archive/record/environments/06_CRHM/files/mnt/disk1/Hydrocraft_server/model/crhmcode/crhmcode/build/crhm",
+          "format": "Linux x86-64 ELF",
+          "sha256": "674d8b65113fb00f6ce2f62e3fb5733981831f1b32033171e21092723c6f8509"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "A_VIC_Tangnaihai",
+      "study": "Experiment 4; paired VIC search",
+      "package_directory": "04_research_archive/record/environments/A_VIC_Tangnaihai",
+      "instructions": "04_research_archive/record/environments/A_VIC_Tangnaihai/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; Linux glibc/libgfortran",
+      "setup_conditions": "Restore files paths; approximately 4 GB /dev/shm. Full continuing-agent campaign additionally needs CLI login and gated campaign layout.",
+      "saved_replay_evidence": "Metrics match; only wall time differs.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/A_VIC_Tangnaihai/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 365,
+      "manifest_sha256": "fa749000d37676eacd0d5e6ace660efbb24d46568a80c3d4dd314ac349b70111",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/A_VIC_Tangnaihai/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "A_VIC_Tangnaihai",
+          "package_path": "04_research_archive/record/environments/A_VIC_Tangnaihai/files/mnt/disk1/Hydrocraft_server/model/route_1.0/src/rout",
+          "format": "Linux x86-64 ELF",
+          "sha256": "2559f97ffcd8b9dcf31c7a70eaccd5ff24fe678ddd2c223f4cd6b1eb679a4ce3"
+        },
+        {
+          "case": "A_VIC_Tangnaihai",
+          "package_path": "04_research_archive/record/environments/A_VIC_Tangnaihai/files/mnt/disk1/Hydrocraft_server/model/VIC-5.1.0/vic/drivers/classic/vic_classic.exe",
+          "format": "Linux x86-64 ELF",
+          "sha256": "ddeaf92b61d6516c5148924beed55dcec3358a46f274662cf76c0f3bbc8fe540"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "C_GR4J_L0123001",
+      "study": "Experiment 5; repeated GR4J formulation",
+      "package_directory": "04_research_archive/record/environments/C_GR4J_L0123001",
+      "instructions": "04_research_archive/record/environments/C_GR4J_L0123001/RERUN.md",
+      "runtime_dependencies": "Python 3.12.3 sealed interpreter; exact 5346-file SITE_MANIFEST; R 4.3.3; airGR 1.7.8",
+      "setup_conditions": "Matching external sealed Python runtime, R/airGR and study path mapping are required. The identity manifests are included; the sealed Python runtime tree is not.",
+      "saved_replay_evidence": "Saved C1_seed0 metrics are byte-identical.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/C_GR4J_L0123001/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 154,
+      "manifest_sha256": "4fb98ed4b77efa15060177cd0c2380e65a95bba7e19871cb704d8b18542d4c5a",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/C_GR4J_L0123001/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "E1_airGR",
+      "study": "Experiment 7; GR4J reference comparison",
+      "package_directory": "04_research_archive/record/environments/E1_airGR",
+      "instructions": "04_research_archive/record/environments/E1_airGR/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; R 4.3.3 recorded; airGR 1.7.8",
+      "setup_conditions": "Install/recover matching external R/airGR; restore model and runner paths.",
+      "saved_replay_evidence": "Saved best-vector metrics are byte-identical.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/E1_airGR/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 39,
+      "manifest_sha256": "e6774097c0ca0923c5ceaf0309930ccd1f4b9c599033187c9619acd6935af087",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/E1_airGR/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "E2_SACSMA_CAMELS",
+      "study": "Experiment 7; SAC-SMA Blanco reference comparison",
+      "package_directory": "04_research_archive/record/environments/E2_SACSMA_CAMELS",
+      "instructions": "04_research_archive/record/environments/E2_SACSMA_CAMELS/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; pandas; Linux glibc/libgfortran",
+      "setup_conditions": "Restore CAMELS and SAC binary paths; use native parameter-file vector.",
+      "saved_replay_evidence": "Four validation fields match exactly.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/E2_SACSMA_CAMELS/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 53,
+      "manifest_sha256": "5ddddee85915058c69422abb7bed81cc46f2c4cc9905c0142e71cb457ec09c82",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/E2_SACSMA_CAMELS/files/home",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        },
+        {
+          "payload_prefix": "04_research_archive/record/environments/E2_SACSMA_CAMELS/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "E2_SACSMA_CAMELS",
+          "package_path": "04_research_archive/record/environments/E2_SACSMA_CAMELS/files/home/server/knowledge-dissection-toolkit/auto_dissect_multi_agent/_work/Sacramento-SMA/source/cmake_build/sac",
+          "format": "Linux x86-64 ELF",
+          "sha256": "45f4c6c7f10b3716824a9e3551ad5d5af44dd1f898bd15287cc94c3f00b7c0b1"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "EXP6_SACSMA_Duan_HYDAT",
+      "study": "Experiment 6; SAC-SMA optimizer comparison at Ibex",
+      "package_directory": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT",
+      "instructions": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT/README.md",
+      "runtime_dependencies": "Python 3.12; spotpy==1.6.7; numpy; Linux libgfortran5",
+      "setup_conditions": "Restore model and HYDAT paths; chmod binary if needed. DDS budget must exceed its initial sample size.",
+      "saved_replay_evidence": "Scientific results: 27 optimizer runs indexed under experiments/6_sacsma_optimizers. This environment supports that reported experiment.",
+      "s6_replay": false,
+      "manifest": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 35,
+      "manifest_sha256": "412323f37bd8b8740b54d04ea337455dc7860b50e43d2770566ecb669642673e",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "EXP6_SACSMA_Duan_HYDAT",
+          "package_path": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT/files/mnt/disk1/Hydrocraft_server/models/Sacramento_SMA/bin/sac",
+          "format": "Linux x86-64 ELF",
+          "sha256": "ce66d08df6b07b56364b7013a97c6f7b9082a2aa215a4bea08e6c84c5090eec8"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    },
+    {
+      "case": "FSM2",
+      "study": "Experiment 2; FSM2 knowledge ablation",
+      "package_directory": "04_research_archive/record/environments/FSM2",
+      "instructions": "04_research_archive/record/environments/FSM2/RERUN.md",
+      "runtime_dependencies": "Python 3.12; numpy; Linux x86-64 glibc>=2.35; libgfortran.so.5",
+      "setup_conditions": "Restore case paths and /dev/shm. Full campaign additionally needs sealed runtime, toolkit, aliases and manifest gates.",
+      "saved_replay_evidence": "Saved default-reference holdout metrics are byte-identical.",
+      "s6_replay": true,
+      "manifest": "04_research_archive/record/environments/FSM2/MANIFEST.sha256",
+      "manifest_entries_verified_2026_09_24": 152,
+      "manifest_sha256": "97571c7d3165a249596a3516c604469747cc7cebfee562913ac53d02f6f62466",
+      "payload_mappings": [
+        {
+          "payload_prefix": "04_research_archive/record/environments/FSM2/files/mnt",
+          "mode": "restore only within a controlled Linux environment; do not bind entire payload over host root"
+        }
+      ],
+      "additional_aliases": [],
+      "binaries": [
+        {
+          "case": "FSM2",
+          "package_path": "04_research_archive/record/environments/FSM2/files/mnt/disk1/Hydrocraft_server/agent_calibration_study/GRL_PAPER_RECORD_2026-09-07/02_tests/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/bin/FSM2",
+          "format": "Linux x86-64 ELF",
+          "sha256": "62d4743d13f2ab2f4318b8bc7d8aab8d9f27fae55b0ded18348a9875a365459c"
+        }
+      ],
+      "native_mac_support": "Not validated; shipped compiled binaries require Linux x86-64",
+      "manifest_scope": "Clean manuscript/SI environment selection, not the original whole-directory manifest"
+    }
+  ],
+  "note": "Current manuscript/SI environments. Case manifests regenerated for the selected package; retained scientific input/output bytes unchanged. MADR dependency is included at03_code/Dependencies/MADR."
+}

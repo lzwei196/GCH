@@ -4,3 +4,12 @@ __pycache__/
 .DS_Store
 *.egg-info/
 .venv/
+.pytest_cache/
+.coverage
+htmlcov/
+outputs/
+._*
+# Keep local companion data and build artifacts out of source control.
+study-package/
+*.zip
+*.tar.gz

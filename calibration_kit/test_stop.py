@@ -12,6 +12,8 @@ import sys
 import tempfile
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from calibration_kit.stop import convention_floor                     # noqa: E402
 from calibration_kit.backends.base import Problem                     # noqa: E402
@@ -53,6 +55,8 @@ def _ki_with_convention(tmp, good=0.65, sat=0.5, vgood=0.75):
 
 
 def test_convention_floor_real_vic():
+    if not Path(VIC_KI).is_dir():
+        pytest.skip("Requires the original server's VIC knowledge infrastructure")
     f = convention_floor(VIC_KI, "nse", "good", "OUT_DISCHARGE")
     assert f["value"] == 0.65 and f["band"] == "good" and f["cites"], f
     try:

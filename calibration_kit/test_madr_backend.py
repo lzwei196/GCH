@@ -8,9 +8,13 @@ import sys
 import tempfile
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from calibration_kit.backends.base import Problem                     # noqa: E402
 from calibration_kit.backends.madr_backend import MadrBackend         # noqa: E402
+
+pytestmark = pytest.mark.skipif(not MadrBackend.available(), reason="Requires the external MADR source tree")
 
 OPT = {"Sumax": 200.0, "Beta": 2.0, "Ce": 0.4}
 

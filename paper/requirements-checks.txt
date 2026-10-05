@@ -1,0 +1,4 @@
+# Saved GR4J scoring and optional Figure S2 rendering only; not model environments.
+PyYAML>=6.0,<7
+numpy>=2.0,<3
+matplotlib>=3.9,<4

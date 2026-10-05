@@ -691,6 +691,7 @@ json.dump(m, open(out, "w"), default=float)
 """
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Requires Linux /proc signal records and parent-death handling")
 def test_a_lane_killed_from_outside_takes_its_model_run_with_it(tmp_path):
     """Opus 6b r3 #1: the OOM killer ends a LANE (SIGKILL, no handler runs); its model run in flight must not go
     on beside the replacement lane."""
@@ -719,6 +720,7 @@ def test_a_lane_killed_from_outside_takes_its_model_run_with_it(tmp_path):
     assert "STATUS completed" in out, out[-2000:]
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Runner inspects Linux /proc/self/status")
 def test_model_runs_in_a_lane_keep_the_default_ctrl_c(monkeypatch):
     """Opus 6b r3 #2: a lane must not hand an IGNORED SIGINT to the model runs it starts (exec keeps SIG_IGN)."""
     _pin_lanes(monkeypatch)
@@ -765,6 +767,7 @@ def _state(pid):
 
 
 @pytest.mark.parametrize("orphaned", [False, True])
+@pytest.mark.skipif(sys.platform != "linux", reason="Requires Linux /proc process-state records")
 def test_ctrl_z_pauses_a_shell_job_and_never_freezes_an_orphaned_one(tmp_path, orphaned):
     """Opus 6b r3 #4 / r4 #1. A shell job (its own group inside the caller's session): Ctrl-Z stops the main
     process AND the lanes; fg resumes them. An orphaned group (setsid, ssh -t, docker exec): the kernel drops the
@@ -809,6 +812,7 @@ def test_ctrl_z_pauses_a_shell_job_and_never_freezes_an_orphaned_one(tmp_path, o
             p.kill()
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Requires util-linux script command options")
 def test_lanes_do_not_stop_on_a_terminal_with_tostop(tmp_path):
     """Opus 6b r4 #2: a lane is a background group for the terminal; with `stty tostop` its first print would stop
     it and the run would wait forever. Run with lanes inside a real pty with tostop, with a time limit."""
@@ -867,6 +871,7 @@ def _pool_task(tmp):
         return None, None, before, _sigblk(), f"{type(e).__name__}: {e}"
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Requires Linux /proc/self/status signal masks")
 def test_a_pool_worker_runs_its_seeds_one_after_another_and_keeps_its_signal_mask(monkeypatch):
     """Opus 6b r5 #1: a daemonic process (a multiprocessing.Pool worker) cannot start lanes; calibrate() falls back to
     seeds one after another, and never leaves Ctrl-C / Ctrl-Z blocked in the worker."""
@@ -883,6 +888,7 @@ def test_a_pool_worker_runs_its_seeds_one_after_another_and_keeps_its_signal_mas
     assert after == before
 
 
+@pytest.mark.skipif(sys.platform != "linux", reason="Requires Linux /proc/self/status signal masks")
 def test_an_unexpected_error_from_a_lanes_start_restores_the_signal_mask(monkeypatch):
     """codex 6b r1 #2: not an OSError (which falls back to in-process) — any other error out of Process.start()
     must still put the caller's signal mask back (Ctrl-C / Ctrl-Z are blocked only around the fork)."""

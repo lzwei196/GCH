@@ -1,6 +1,7 @@
 """Option 1 (Leo, 2026-10-02): the engine's own pilot checks the runner's reply (`reply_gate`); when the watched
 scores or the series are missing an agent upgrades the reply inside a guarded transaction — kept only on a reviewer's
 APPROVE, a complete reply in the engine's pilot, and unchanged own scores; anything else restores the package."""
+import importlib.util
 import json
 import os
 import shutil
@@ -124,6 +125,8 @@ def test_a_reply_whose_scores_disagree_with_its_series_is_incomplete():
 
 # ── the upgrade of the PROJECT's runner ─────────────────────────────────────────────────────────────────────────
 def _fake_tools(monkeypatch, verdict, tail=NEW_TAIL, also=None, boom=None, agent_reply='{"status": "upgraded"}'):
+    if importlib.util.find_spec("stage_calibrate") is None:
+        pytest.skip("Live agent repair requires the external KI host adapter")
     import stage_calibrate as SC
     calls, reviews = [], []
     O = types.ModuleType("orchestrator")

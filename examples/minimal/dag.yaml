@@ -1,0 +1,6 @@
+outputs:
+  - var: Q
+    observability:
+      comparable_obs_shapes:
+        - obs_shape: point_time_series
+          metric_families: [temporal_pattern_match]
