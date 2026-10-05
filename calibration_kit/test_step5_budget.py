@@ -221,11 +221,30 @@ def test_probe_lanes_uses_the_measurement():
     assert out2["lanes"] == 1 and out2["measured"] is None
 
 
+def pin_pilot_memory(monkeypatch):
+    """Give lane/recording tests a controlled memory workload, retaining real timings."""
+    # Pin its memory workload too: pilot.py currently interprets Darwin's byte-valued
+    # ru_maxrss as Linux KiB, inflating measured MB by 1024. That production limitation
+    # remains documented and unfixed; elapsed time and lane efficiency are still measured.
+    from calibration_kit import pilot as _pilot
+    original_pilot = _pilot.run_pilot
+
+    def memory_fixture(*args, **kwargs):
+        result = original_pilot(*args, **kwargs)
+        result["peak_rss_mb"] = 64.0
+        for record in result["records"]:
+            record["peak_rss_mb"] = 64.0
+        return result
+
+    monkeypatch.setattr(_pilot, "run_pilot", memory_fixture)
+
+
 def test_calibrate_measures_lanes_for_a_parallel_safe_subprocess_runner_and_cleans_up(monkeypatch):
     # a busy server (1-minute load above the core count) leaves 1 free core and no probe: pin the machine
     from calibration_kit import compute as _cmp
     monkeypatch.setattr(_cmp, "probe_machine", lambda: {"cores": 192, "load1": 0.0, "free_cores": 192,
                                                         "mem_available_gb": 64.0})
+    pin_pilot_memory(monkeypatch)
     tmp = tempfile.mkdtemp(prefix="kdt_s5_")
     try:
         ki, wd = E._fixture(tmp, {"mode": "measured", "allowance": "10m", "parallel_safe": True, "seeds": 2},

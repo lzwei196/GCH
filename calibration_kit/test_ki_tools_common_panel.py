@@ -29,12 +29,15 @@ def _load(path, name):
 
 
 def _scorer():
-    try:
+    installed = importlib.util.find_spec("ki_tools_common") is not None
+    if installed:
         from ki_tools_common import metrics as M
         if hasattr(M, "lnnse"):
             return M
-    except ImportError:
-        pass
+    if not (STAGED / "metrics.py").is_file():
+        if installed:
+            raise ImportError("Installed ki_tools_common lacks the required panel metrics and no staged scorer is available")
+        pytest.skip("Requires the external ki_tools_common scorer", allow_module_level=True)
     return _load(STAGED / "metrics.py", "metrics_staged")
 
 

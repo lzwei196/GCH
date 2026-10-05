@@ -292,13 +292,44 @@ def test_the_old_floor_band_on_the_validation_side_respects_its_variable():
         assert st["calibration"]["metrics"]["nse"]["band"] == band
 
 
-def test_no_call_is_reported_as_such():
+def test_no_call_is_reported_as_such(monkeypatch):
+    from calibration_kit import calib as C
+    from calibration_kit.backends.base import CalibResult
+
+    class _NoCalls:
+        @staticmethod
+        def available():
+            return True
+
+        def optimize(self, problem, budget, seed=0, **kw):
+            return CalibResult(best_x=[], best_loss=[float("inf")], n_evaluations=0,
+                               backend="zero-call stand-in", notes="no evaluations made")
+
+    original = C._make_backend
+    monkeypatch.setattr(C, "_make_backend", lambda algorithm: _NoCalls() if algorithm == "smt" else original(algorithm))
     rep, _ = _calib(strategy={"default_algorithm": "smt"})
     e = rep["convergence"]["ended"]
-    if e["calls"] == 0:
-        assert e["text"] == "no call was made" and e["ended_at_call"] is None
-    else:
-        assert e["text"].startswith("convergence not tracked")
+    assert e["calls"] == 0
+    assert e["text"] == "no call was made" and e["ended_at_call"] is None
+
+
+def test_unavailable_backend_is_reported_before_search(monkeypatch):
+    from calibration_kit import calib as C
+
+    class _Unavailable:
+        @staticmethod
+        def available():
+            return False
+
+        def optimize(self, *args, **kwargs):
+            raise AssertionError("An unavailable backend must never execute")
+
+    original = C._make_backend
+    monkeypatch.setattr(C, "_make_backend", lambda algorithm: _Unavailable() if algorithm == "smt" else original(algorithm))
+    rep, history = _calib(strategy={"default_algorithm": "smt"})
+    assert rep["status"] == "backend_unavailable" and rep["algorithm"] == "smt"
+    assert "not importable" in rep["reason"]
+    assert not any(row.get("phase") == "search" for row in history)
 
 
 def test_the_rebuilt_front_filter():

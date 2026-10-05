@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source_package": "GRL_SUBMISSION_PACKAGE_2026-09-24",
+  "exported_on": "2026-10-05",
+  "repository_base_commit": "5722f2b1e41c49f1a07a0284fdc60daadd1a4295",
+  "source_policy": "Only package-relative locators are operational. Absolute provenance fields and historical shell command blocks are omitted; scientific scope and evidence-status text is preserved. Source hashes identify the complete external indexes.",
+  "indexes": [
+    {
+      "file": "TEST_INDEX.json",
+      "package_path": "04_research_archive/TEST_INDEX.json",
+      "source_sha256": "64264ff592e930492f7689a3583acc9cf0d2b3c2c63b731c4fc87e25aeeb0802",
+      "metadata_sha256": "2d24ea68f26a421752266ac02023b7ea96129940d85c3f5867547cfc2c69c024"
+    },
+    {
+      "file": "PAPER_EVIDENCE_MAP.json",
+      "package_path": "04_research_archive/PAPER_EVIDENCE_MAP.json",
+      "source_sha256": "282891594e304331b142afce00379f893b5a268e56cfecf97c072961416b5f58",
+      "metadata_sha256": "45b346c92a2c1feacd6539bf9d828a69ceac1206072372e6db84003c655c576d"
+    },
+    {
+      "file": "KI_INDEX.json",
+      "package_path": "06_knowledge_infrastructure/KI_INDEX.json",
+      "source_sha256": "e405b4ce6b4d656cb63b60b5eec54ffb49aaaa6bc886305ad1057152ad3bd397",
+      "metadata_sha256": "9580d2e2129c9d0b485538b415c5ab83c9b82548dd3ce2806912ec5feeccbd8c"
+    },
+    {
+      "file": "ENVIRONMENT_INDEX.json",
+      "package_path": "03_code/Recovered_Dependencies/Environment_Setup/ENVIRONMENT_INDEX.json",
+      "source_sha256": "2e9ba5958ccd57bbad3f313adea2ed33d1bc6a6f37c71c40c648faefad39e191",
+      "metadata_sha256": "2f9f515f093fbe53015a74cb3a5b6a8f5f85482805eb3610f8a27469ed4c1439"
+    }
+  ],
+  "adapted_checks": [
+    {
+      "file": "checks/check_saved_results.py",
+      "package_path": "03_code/reproduce/check_saved_results.py",
+      "source_sha256": "99b4c56249266ec4f8f37893006ef3a5b9a193fbd505bf4deb0d6a66e7d15c23"
+    },
+    {
+      "file": "checks/environment_preflight.py",
+      "package_path": "03_code/reproduce/environment_preflight.py",
+      "source_sha256": "e4cacd88920b983c3c38df1b22f95ea7331b20eeca629ee9808f48b26323c7d4"
+    },
+    {
+      "file": "checks/rebuild_figure_s2.py",
+      "package_path": "03_code/reproduce/rebuild_figure_s2.py",
+      "source_sha256": "ab987090fb77a8259703a92b0cdf49a0be4f3ca8cafd542ad39b72b816c4f9a7"
+    }
+  ]
+}

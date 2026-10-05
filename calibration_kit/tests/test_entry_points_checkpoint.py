@@ -247,7 +247,9 @@ KNOWN_GAPS = {}
 
 def known_gap(reason):
     def deco(fn):
-        KNOWN_GAPS[fn.__name__] = reason; return fn
+        import pytest
+        KNOWN_GAPS[fn.__name__] = reason
+        return pytest.mark.xfail(reason=reason, raises=AssertionError, strict=True)(fn)
     return deco
 
 

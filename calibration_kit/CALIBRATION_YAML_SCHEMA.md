@@ -204,15 +204,21 @@ get V. Each kind has a paired reader so the contract can be self-tested
   mapping, or a `budget.mode` other than measured / fixed, is refused at load even then (an empty
   value counts as no block). In measured mode, defaults that break the constraints are also refused
   at load.
-- **C10 Convergence is tracked on every call, on a panel.** *(rewritten 2026-09-29, design
-  HANDOFF_CONVERGENCE_2026-09-27_v2.md)* Every run reports `convergence`: the rule's stop point (each
-  objective's loss AND each variable's required panel metrics flat over the window, and the front for
-  trade-off searches), what ended the search and why (`ended`), the seed and per-variable verdicts,
-  §2.10 safety, and the standards check. Default `mode: keep_going` — the search runs to the cap (or its
-  optimizer's own test), so the rule never changes a result. `mode: stop` ends SCE-UA / NSGA-II at the
-  stop point; DDS is never stopped early (its schedule is written against the budget, Tolson &
-  Shoemaker 2007) and DREAM's own R-hat decides. The old `strategy.stop` block is removed and translated
-  on load (mode stop; its floor band -> the standards band). NSE alone is never the test (Gupta et al. 2009).
+- **C10 Convergence uses optimizer-native rules.** *(updated 2026-10-05 to describe the
+  2026-10-04 implementation)* The report's `convergence.verdict` uses optimizer loop or generation
+  evidence; per-call panel checks remain diagnostics under `step_rule_verdict`. SCE-UA converges when
+  its normalized geometric population range falls below 0.001, OR when the objective and watched
+  scores change by at most 0.1% over ten evolution loops. The population-range branch can fire earlier;
+  these are classic SCE-UA settings, not SPOTPY's shipped defaults. For pymoo optimizers, the native
+  design-space or objective-space termination test supplies the verdict; evaluation and generation
+  caps are budget limits, not convergence. Default `mode: keep_going` records this evidence without
+  ending search through the GCH convergence hook; explicit `mode: stop` enables stopping at the
+  supported optimizer's loop or generation boundary. DDS retains its budget-dependent schedule and
+  reports a descriptive settle point; DREAM uses its own R-hat criterion. `ended` records why execution
+  ended, and scientific acceptance against standards is assessed separately. Short or incomplete
+  evidence can remain unknown. The legacy `strategy.stop` block is translated on load (mode stop;
+  its floor band becomes the standards band). See [current usage](../USAGE.md#budgets-and-convergence)
+  for settings, report fields and validation limits.
 - **C11 Seeds must agree.** *(build step 6, 2026-09-30; design §1.7, §2.7)* `strategy.budget.seeds`
   (default 3, a positive whole number) searches run from seeds `seed`, `seed+1`, … on the same pilot,
   tolerances, protection anchor and cap per seed; commissioning, the proof and the pilot run once. A

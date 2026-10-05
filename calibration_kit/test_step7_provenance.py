@@ -121,6 +121,8 @@ def test_the_split_provenance_covers_this_call_only():
 
 def test_the_agent_prompt_no_longer_says_score_both():
     p = Path(__file__).resolve().parents[1] / "auto_dissect_multi_agent" / "stage_calibrate.py"
+    if not p.is_file():
+        pytest.skip("Requires the external KI host's agent prompt")
     txt = p.read_text()
     assert "score both" not in txt and 'metrics["__kdt__"]["split"]' in txt
 
@@ -342,6 +344,7 @@ def test_the_machine_probe_lane_runs_are_logged(monkeypatch):
     from calibration_kit import compute
     monkeypatch.setattr(compute, "probe_machine", lambda: {"cores": 192, "load1": 0.0, "free_cores": 192,
                                                            "mem_available_gb": 64.0})
+    S5.pin_pilot_memory(monkeypatch)
     tmp = tempfile.mkdtemp(prefix="kdt_s7_")
     try:
         ki, wd = E._fixture(tmp, {"mode": "measured", "allowance": "10m", "parallel_safe": True, "seeds": 2},
@@ -444,6 +447,7 @@ def test_every_lane_run_is_logged_once_and_a_failed_one_is_ok_false(monkeypatch)
     tmp = tempfile.mkdtemp(prefix="kdt_s7_")
     try:
         from calibration_kit import test_step5_budget as S5
+        S5.pin_pilot_memory(monkeypatch)
         ki, wd = E._fixture(tmp, {"mode": "measured", "allowance": "10m", "parallel_safe": True, "seeds": 2},
                             None, 20)
         S5.probe_contract(tmp, ki, probe_body=("    time.sleep(0.2)\n    if 'lane_1' in out:\n        sys.exit(1)\n"

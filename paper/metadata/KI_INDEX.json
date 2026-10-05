@@ -1,0 +1,565 @@
+{
+  "schema_version": 3,
+  "purpose": "Knowledge and control inputs for the current manuscript and SI only; paper_location explains each row. Absolute sources preserve provenance; package paths refer to selected included files, not a complete historical archive.",
+  "rows": [
+    {
+      "case_id": "EXP1_WOFOST_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_WOFOST_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "EXP1_HBV_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/tools/calib_run_moyie_mv.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_HBV_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "EXP1_SUMMA_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_SUMMA_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "EXP1_VIC_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_VIC_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "EXP1_MODFLOW6_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_MODFLOW6_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "EXP1_CRHM_multivariable",
+      "experiment": "1_six_model",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM",
+      "source_evidence": [],
+      "version_and_scope": "Selected working files from the retained September 16 family KI; not a claim of one global authoring-time freeze. Separate task KI preserves the graph, convention, contract and runner used for the reported declared-budget case. WOFOST/VIC as-read replacements remain separately labelled.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/dag.yaml",
+        "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/docs/validation_convention.yaml"
+      ],
+      "paper_location": "Figure 2; SI S2.1–2; Tables S2a–b and S15"
+    },
+    {
+      "case_id": "EXP1_CRHM_single_objective",
+      "experiment": "1_six_model/single_objective_phase",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "source_evidence": [],
+      "version_and_scope": "Retained single-objective contract and runner, distinct from multivariable case. Run-output survival limits are documented in single-objective records.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM/calibration.yaml",
+      "runner_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM/tools/calib_run.py",
+      "source_evidence_package_path": [
+        "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM/calib/capability_case.json",
+        "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+      ],
+      "paper_location": "SI S2.5; Tables S12–14"
+    },
+    {
+      "case_id": "FSM2_confirmatory_K",
+      "experiment": "2_fsm2_knowledge",
+      "agent_input_package_path": "06_knowledge_infrastructure/03_FSM2/agent_sealed_K",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/03_FSM2/engine_frozen_K",
+      "contract_source": [],
+      "version_and_scope": "K is structured KI; R is raw documentation; M is name/common schema without KI. Engine KI is common and distinct from scrubbed authoring corpus.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/K1_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/K2_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/K3_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/K4_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/K5_calibration.yaml"
+      ],
+      "runner_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json",
+      "paper_location": "Figure 3; SI S3.1–2; Table S4"
+    },
+    {
+      "case_id": "FSM2_confirmatory_R",
+      "experiment": "2_fsm2_knowledge",
+      "agent_input_package_path": "06_knowledge_infrastructure/03_FSM2/raw_documentation_control",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/03_FSM2/engine_frozen_K",
+      "contract_source": [],
+      "version_and_scope": "K is structured KI; R is raw documentation; M is name/common schema without KI. Engine KI is common and distinct from scrubbed authoring corpus.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/R1_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/R2_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/R3_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/R4_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/R5_calibration.yaml"
+      ],
+      "runner_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json",
+      "paper_location": "Figure 3; SI S3.1–2; Table S4"
+    },
+    {
+      "case_id": "FSM2_confirmatory_M",
+      "experiment": "2_fsm2_knowledge",
+      "agent_input_package_path": "06_knowledge_infrastructure/03_FSM2/task_schema",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/03_FSM2/engine_frozen_K",
+      "contract_source": [],
+      "version_and_scope": "K is structured KI; R is raw documentation; M is name/common schema without KI. Engine KI is common and distinct from scrubbed authoring corpus.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/M1_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/M2_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/M3_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/M4_calibration.yaml",
+        "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/contracts/M5_calibration.yaml"
+      ],
+      "runner_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json",
+      "paper_location": "Figure 3; SI S3.1–2; Table S4"
+    },
+    {
+      "case_id": "FSM2_exploratory",
+      "experiment": "2_fsm2_knowledge/exploratory",
+      "agent_input_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/inputs",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/03_FSM2/engine_frozen_K",
+      "version_and_scope": "Exploratory precursor; do not substitute its inputs/results for the confirmatory campaign.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts",
+      "runner_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/provenance.json",
+      "paper_location": "SI S3.2 (separately reported exploratory precursor)"
+    },
+    {
+      "case_id": "GR4J_B_K",
+      "experiment": "3_gr4j_ranges",
+      "agent_input_package_path": "06_knowledge_infrastructure/04_GR4J/B_agent_sealed_K",
+      "engine_task_ki_source": null,
+      "engine_task_ki_package_path": null,
+      "contract_source": [],
+      "runner_source": null,
+      "version_and_scope": "Static parameter-range/target comparison; M has name/common task schema and no KI. No numerical execution.",
+      "setup_status": "retained static inputs; comparison staging is separate",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/K1_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/K2_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/K3_calibration.yaml"
+      ],
+      "runner_package_path": null,
+      "source_evidence_package_path": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/CAMPAIGN_MANIFEST.json",
+      "paper_location": "SI S3.3; Figure S1 (current nine-contract comparison)"
+    },
+    {
+      "case_id": "GR4J_B_R",
+      "experiment": "3_gr4j_ranges",
+      "agent_input_package_path": "06_knowledge_infrastructure/04_GR4J/B_raw_documentation_control",
+      "engine_task_ki_source": null,
+      "engine_task_ki_package_path": null,
+      "contract_source": [],
+      "runner_source": null,
+      "version_and_scope": "Static parameter-range/target comparison; M has name/common task schema and no KI. No numerical execution.",
+      "setup_status": "retained static inputs; comparison staging is separate",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/R1_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/R2_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/R3_calibration.yaml"
+      ],
+      "runner_package_path": null,
+      "source_evidence_package_path": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/CAMPAIGN_MANIFEST.json",
+      "paper_location": "SI S3.3; Figure S1 (current nine-contract comparison)"
+    },
+    {
+      "case_id": "GR4J_B_M",
+      "experiment": "3_gr4j_ranges",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_source": null,
+      "engine_task_ki_package_path": null,
+      "contract_source": [],
+      "runner_source": null,
+      "version_and_scope": "Static parameter-range/target comparison; M has name/common task schema and no KI. No numerical execution.",
+      "setup_status": "retained static inputs; comparison staging is separate",
+      "contract_package_path": [
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/M1_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/M2_calibration.yaml",
+        "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/contracts/M3_calibration.yaml"
+      ],
+      "runner_package_path": null,
+      "source_evidence_package_path": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/CAMPAIGN_MANIFEST.json",
+      "paper_location": "SI S3.3; Figure S1 (current nine-contract comparison)"
+    },
+    {
+      "case_id": "GR4J_C",
+      "experiment": "5_gr4j_repeated",
+      "agent_input_package_path": "06_knowledge_infrastructure/04_GR4J/C_engine_and_agent_K",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/04_GR4J/C_engine_and_agent_K",
+      "version_and_scope": "Same sixteen-file sealed corpus used for authoring and execution; fixed runner is supplied separately.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/contracts",
+      "runner_package_path": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/sealed_exec/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/CAMPAIGN_MANIFEST.json",
+      "paper_location": "Figure 4; SI S4.1; Table S3"
+    },
+    {
+      "case_id": "GR4J_E1",
+      "experiment": "7_reference_comparisons/E1",
+      "agent_input_package_path": "06_knowledge_infrastructure/04_GR4J/E1_as_read_core_reconstructed_2026-09-02",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/04_GR4J/E1_server_KI_snapshot",
+      "version_and_scope": "Twenty working author-input files reconstructed using the three documented pre-edit replacements; not an attested whole-tree freeze. Separate server working files retain the runtime operator. Development snapshots and unrelated backups are omitted.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/agent_authored.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/calib_run.py",
+      "source_evidence_package_path": "06_knowledge_infrastructure/04_GR4J/E1_authoring_provenance/README.md",
+      "paper_location": "SI S3.4; Figure S5a–b"
+    },
+    {
+      "case_id": "SACSMA_E2",
+      "experiment": "7_reference_comparisons/E2",
+      "agent_input_package_path": "06_knowledge_infrastructure/05_SACSMA/E2_KI_versions/as_read_by_agent_2026-09-02",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/05_SACSMA/E2_KI_versions/as_read_by_agent_2026-09-02",
+      "version_and_scope": "Dedicated experiment code implements task decisions YAML; not necessarily generic calibration.yaml schema. Later literature indexes intentionally excluded from as-read set. Preserve guided-study disclosures.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/agent_authored.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/run_e2_blanco.py",
+      "source_evidence_package_path": "06_knowledge_infrastructure/05_SACSMA/E2_authoring_provenance/README.md",
+      "paper_location": "SI S3.5; Figure S5c–d; Table S9"
+    },
+    {
+      "case_id": "SACSMA_EXP6",
+      "experiment": "6_sacsma_optimizers",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_source": null,
+      "engine_task_ki_package_path": null,
+      "runner_source": [],
+      "version_and_scope": "Numerical optimizer comparison; no separate KI-authoring experiment. Evaluation closure is in experiment6 and its environment.",
+      "setup_status": "not applicable: no separate agent KI required",
+      "contract_package_path": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_plan.json",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_driver.py",
+        "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_harness.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/6_sacsma_optimizers/README.md",
+      "paper_location": "Figure 4; SI S5.1; Tables S5b–c"
+    },
+    {
+      "case_id": "SACSMA_N",
+      "experiment": "7_reference_comparisons/N_expert_match",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_source": null,
+      "engine_task_ki_package_path": null,
+      "contract_source": null,
+      "version_and_scope": "Static parameter comparison reuses E2 result; no additional KI/model run.",
+      "setup_status": "not applicable: static comparison",
+      "contract_package_path": null,
+      "runner_package_path": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/compare_newman.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/RESULT_N.md",
+      "paper_location": "SI S3.5; Figure S5d; Table S9"
+    },
+    {
+      "case_id": "VIC_A",
+      "experiment": "4_vic_paired_search",
+      "agent_input_source": [],
+      "agent_input_package_path": "06_knowledge_infrastructure/06_VIC_A",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/06_VIC_A/server_KI_snapshot",
+      "version_and_scope": "Treatment includes knowledge-derived prompt inputs, diagnostics and frozen E4 contract dependency; generic VIC KI alone is not the complete treatment.",
+      "setup_status": "retained; original runtime paths require staging",
+      "contract_package_path": "06_knowledge_infrastructure/06_VIC_A/frozen_contract_inputs/authored_grounded.20260902T030746Z.json",
+      "runner_package_path": "06_knowledge_infrastructure/06_VIC_A/server_KI_snapshot/tools/calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/CAMPAIGN_MANIFEST.json",
+      "paper_location": "Figure 4; SI S4.2; Table S5a"
+    },
+    {
+      "case_id": "SUPP_direct_WOFOST_SM",
+      "experiment": "S_supplementary",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/09_supplementary_task_fragments/multivar_proof_wofost_kbs",
+      "version_and_scope": "Reported TWSO + soil-moisture direct driver. The selected KI fragment contains its byte-identical contract and a runner differing from the reported runner only by a comment. It is not the TWSO + TAGP commissioning task behind Table S2c; that commissioning task KI is unavailable. The exact temporary graph/convention assembly remains unattested.",
+      "setup_status": "partial setup closure: temporary KI reconstruction still required",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_mv_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_mv_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/README.md",
+      "paper_location": "SI S2.4; Table S1b"
+    },
+    {
+      "case_id": "SUPP_direct_WOFOST_LAI",
+      "experiment": "S_supplementary",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "version_and_scope": "Direct-driver task; family tools retained. Exact temporary task-KI graph/convention assembly is not attested by preserved fragments; consult case code.",
+      "setup_status": "partial setup closure: temporary KI reconstruction still required",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_lai_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_lai_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/README.md",
+      "paper_location": "SI S2.4; Table S1b"
+    },
+    {
+      "case_id": "SUPP_direct_CRHM_Dore",
+      "experiment": "S_supplementary",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "version_and_scope": "Direct-driver task; family tools retained. Exact temporary task-KI graph/convention assembly is not attested by preserved fragments; consult case code.",
+      "setup_status": "partial setup closure: temporary KI reconstruction still required",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/crhm_mv_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/crhm_mv_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/README.md",
+      "paper_location": "SI S2.4; Table S1b"
+    },
+    {
+      "case_id": "SUPP_direct_VIC_Tangnaihai_ET",
+      "experiment": "S_supplementary",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC",
+      "version_and_scope": "Direct-driver task; family tools retained. Exact temporary task-KI graph/convention assembly is not attested by preserved fragments; consult case code.",
+      "setup_status": "partial setup closure: temporary KI reconstruction still required",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/vic_mv_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/vic_mv_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/README.md",
+      "paper_location": "SI S2.4; Table S1b"
+    },
+    {
+      "case_id": "SUPP_agent_WOFOST",
+      "experiment": "S_supplementary/agent_authored",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST",
+      "version_and_scope": "Reported supplementary workflow-generation example. Retained contract and runner are exact; the complete temporary task-KI input tree is not attested.",
+      "setup_status": "preserved contract/runner; cold setup not established",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_AGENT_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_AGENT_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_agent.log",
+      "paper_location": "SI S2.3 (workflow-generation examples)"
+    },
+    {
+      "case_id": "SUPP_agent_CRHM",
+      "experiment": "S_supplementary/agent_authored",
+      "agent_input_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "engine_task_ki_package_path": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM",
+      "version_and_scope": "Reported supplementary workflow-generation example. Retained contract and runner are exact; the complete temporary task-KI input tree is not attested.",
+      "setup_status": "preserved contract/runner; cold setup not established",
+      "contract_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_AGENT_calibration.yaml",
+      "runner_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_AGENT_calib_run.py",
+      "source_evidence_package_path": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_agent.log",
+      "paper_location": "SI S2.3 (workflow-generation examples)"
+    },
+    {
+      "case_id": "commissioning_02_hbv_discharge_swe_moyie",
+      "experiment": "1_six_model/commissioning",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki",
+      "runner_source": [],
+      "version_and_scope": "Reported commissioning case; retain its own graph/convention and runner rather than substituting the declared-budget convention.",
+      "setup_status": "retained historical variant; staging separate",
+      "contract_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/calibration.yaml",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/tools/calib_run.py",
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/tools/calib_run_moyie_mv.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/1_six_model/README.md",
+      "paper_location": "SI S1.2 and S2.2; Table S2c"
+    },
+    {
+      "case_id": "commissioning_03_summa_discharge_swe_moyie",
+      "experiment": "1_six_model/commissioning",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki",
+      "runner_source": [],
+      "version_and_scope": "Reported commissioning case; retain its own graph/convention and runner rather than substituting the declared-budget convention.",
+      "setup_status": "retained historical variant; staging separate",
+      "contract_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki/calibration.yaml",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki/tools/calib_run.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/1_six_model/README.md",
+      "paper_location": "SI S1.2 and S2.2; Table S2c"
+    },
+    {
+      "case_id": "commissioning_04_vic_discharge_et_xixian",
+      "experiment": "1_six_model/commissioning",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki",
+      "runner_source": [],
+      "version_and_scope": "Reported commissioning case; retain its own graph/convention and runner rather than substituting the declared-budget convention.",
+      "setup_status": "retained historical variant; staging separate",
+      "contract_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/calibration.yaml",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/tools/calib_run.py",
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/tools/calib_run_wangjiaba.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/1_six_model/README.md",
+      "paper_location": "SI S1.2 and S2.2; Table S2c"
+    },
+    {
+      "case_id": "commissioning_06_modflow6_flow_baseflow_sagehen",
+      "experiment": "1_six_model/commissioning",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki",
+      "runner_source": [],
+      "version_and_scope": "Reported commissioning case; retain its own graph/convention and runner rather than substituting the declared-budget convention.",
+      "setup_status": "retained historical variant; staging separate",
+      "contract_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki/calibration.yaml",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki/tools/calib_run.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/1_six_model/README.md",
+      "paper_location": "SI S1.2 and S2.2; Table S2c"
+    },
+    {
+      "case_id": "commissioning_07_crhm_discharge_swe_blueriver",
+      "experiment": "1_six_model/commissioning",
+      "agent_input_source": null,
+      "agent_input_package_path": null,
+      "engine_task_ki_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki",
+      "runner_source": [],
+      "version_and_scope": "Reported commissioning case; retain its own graph/convention and runner rather than substituting the declared-budget convention.",
+      "setup_status": "retained historical variant; staging separate",
+      "contract_package_path": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki/calibration.yaml",
+      "runner_package_path": [
+        "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki/tools/calib_run.py"
+      ],
+      "source_evidence_package_path": "04_research_archive/record/experiments/1_six_model/README.md",
+      "paper_location": "SI S1.2 and S2.2; Table S2c"
+    }
+  ]
+}

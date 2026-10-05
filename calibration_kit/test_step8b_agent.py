@@ -6,6 +6,7 @@
   diagnosis; a certified module's no_baseline -> setup diagnosis) and never on fit quality;
 - calibrate.py maps every engine status to an honest verdict and records the `triage` block;
 - db_calibration.py's verdict list holds the new verdicts (for new databases)."""
+import importlib.util
 import json
 import sqlite3
 import sys
@@ -18,9 +19,12 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "auto_dissect_multi_agent"))
 
-import calibrate as CAL                                                     # noqa: E402
-import db_calibration as DB                                                 # noqa: E402
-import stage_calibrate as SC                                                # noqa: E402
+for _module in ("calibrate", "db_calibration", "stage_calibrate"):
+    if importlib.util.find_spec(_module) is None:
+        pytest.skip(f"Requires the external KI host module: {_module}", allow_module_level=True)
+import calibrate as CAL
+import db_calibration as DB
+import stage_calibrate as SC
 
 
 # ── the prompt (gap 2r) ─────────────────────────────────────────────────────────────────────────

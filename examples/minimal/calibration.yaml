@@ -1,0 +1,22 @@
+injection:
+  mode: runner
+parameters:
+  - {name: release, type: continuous, range: [0.05, 0.8], default: 0.12}
+  - {name: gain, type: continuous, range: [0.6, 1.8], default: 0.8}
+targets:
+  - {var: Q, weight: 1.0}
+strategy:
+  default_algorithm: dds
+  max_evaluations: 60
+  budget: {mode: fixed, seeds: 1}
+  convergence:
+    mode: keep_going
+    variables: {Q: {kind: flow}}
+  probe_objectives: true
+  holdout: {kind: chronological, max_degradation: 0.35, abs_tolerance: 0.05}
+runner:
+  kind: subprocess
+  command: [python, calib_run.py, --out, "{metrics_json}"]
+  cwd: "{ki_path}"
+  metrics_file: "{metrics_json}"
+  parallel_safe: false

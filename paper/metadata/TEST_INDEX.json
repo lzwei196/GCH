@@ -1,0 +1,4787 @@
+{
+  "schema_version": 2,
+  "scope": "Only current manuscript/SI reported tests and necessary dependencies; entries are navigational, not independent replications.",
+  "package_record_root": "04_research_archive/record",
+  "tests": [
+    {
+      "test_id": "E1_WOFOST_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/01_WOFOST/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/01_WOFOST/eval_metrics_cache_0d11c444ac.jsonl"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/01_WOFOST/eval_metrics_cache_925bfabbeb.jsonl"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/01_WOFOST/eval_metrics_cache_f7176b4f37.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 10,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_WOFOST_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_WOFOST_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "contemporaneous console report extract; original TWSO+TAGP commissioning report file not archived",
+      "run_mode": "inspect transcript line15837 and recovered extract; no original commissioning runner/contract closure certified",
+      "setup_notes": "TableS2c WOFOST 11.0593%/4.3934% PBIAS comes from transcript line15837. cases/01_wofost_yield_biomass/wofost_mv_report.json is instead earlier yield+soil-moisture direct-driver output. Final WOFOST environment is related context, not proof of identical earlier setup. Original full coordinator session remains in the research archive outside this clean package; the retained console extraction is the paper evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/wofost_commissioning/mv_session_wofost_report_extracts.json"
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 3,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_WOFOST_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_WOFOST",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_WOFOST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "E1_HBV_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/02_HBV/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/02_HBV/eval_metrics_cache_2240c04601.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 8,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_HBV_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_HBV_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Historical commissioning result; do not interpret as a controlled budget comparison with final campaign. Operator/configuration can differ.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 19,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_HBV_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_HBV",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_HBV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "E1_SUMMA_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/03_SUMMA/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/03_SUMMA/eval_metrics_cache_c49fa657c4.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 8,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_SUMMA_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_SUMMA_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Historical commissioning result; do not interpret as a controlled budget comparison with final campaign. Operator/configuration can differ.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/mv_calib/report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_SUMMA_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_SUMMA",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_SUMMA",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "E1_VIC_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/04_VIC/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/04_VIC/eval_metrics_cache_f554335809.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/04_VIC"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 8,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_VIC_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_VIC_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Historical commissioning result; do not interpret as a controlled budget comparison with final campaign. Operator/configuration can differ.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_VIC_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_VIC",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_VIC",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "E1_MODFLOW6_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/05_MODFLOW6/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/05_MODFLOW6/eval_metrics_cache_7930224cc4.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 8,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_MODFLOW6_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_MODFLOW6_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Historical commissioning result; do not interpret as a controlled budget comparison with final campaign. Operator/configuration can differ.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/calib_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 30,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_MODFLOW6_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_MODFLOW6",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/MODFLOW6"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_MODFLOW6",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "E1_CRHM_MULTIVARIABLE",
+      "paper": "Main Table 1; Fig.2; SI S2.1-S2.2; Tables S2a-S2b",
+      "question": "Does a model-specific generated formulation execute and meet each recorded component rule?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Declared-budget final campaign, seed 0. Validation informs member selection. Stage native model files and recorded paths before numerical rerun. Independent acceptance audit is separate from saved-flag verification.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/calibration.yaml"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/06_CRHM/rerun_conv_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/06_CRHM/eval_metrics_cache_e6784646bb.jsonl"
+        }
+      ],
+      "script": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/tools/calib_run.py"
+        },
+        {
+          "package": "04_research_archive/record/framework/reproduce/reproduce_six_model.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 45,
+          "heading": "S2.1 Models and observational targets"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 542,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_CRHM_MULTIVARIABLE",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S1.3",
+        "SI S1.4",
+        "SI S2.1",
+        "SI S2.2",
+        "SI Figure S2",
+        "SI Table S1",
+        "SI Table S2a",
+        "SI Table S2b"
+      ]
+    },
+    {
+      "test_id": "E1_CRHM_COMMISSIONING",
+      "paper": "SI S1.1; S2.2; Table S2c",
+      "question": "Was the case-specific runner/formulation commissioned before the final numerical campaign?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Historical commissioning result; do not interpret as a controlled budget comparison with final campaign. Operator/configuration can differ.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki/calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 11,
+          "heading": "S1.1 Formulation and execution"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 53,
+          "heading": "S2.2 Agent-led formulation and numerical execution"
+        }
+      ],
+      "record_file_count": 31,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E1_CRHM_COMMISSIONING",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 2",
+        "SI S1.1",
+        "SI S2.2",
+        "SI Table S1",
+        "SI Table S2c"
+      ]
+    },
+    {
+      "test_id": "SINGLE_CRHM",
+      "paper": "Main Table 1; SI S2.5; Table S12",
+      "question": "What happened in the initial single-objective execution?",
+      "evidence_status": "console-record results; original execution outputs lost; retained original KI contract",
+      "run_mode": "inspect console record; reconstructed script is historical and needs full restaging",
+      "setup_notes": "Reconstruction is from coordinator tool calls, not recovered original run directory. Final replay environment does not by itself certify identical initial single-objective task setup.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_benchmark_single_variable_runs.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/bench_exec.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM/calibration.yaml"
+        },
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM/calib/capability_case.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 28,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/SINGLE_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "POOR_BASELINE_HBV",
+      "paper": "SI S2.5; Table S12",
+      "question": "Did an initial workflow improve a poor baseline?",
+      "evidence_status": "console-record only; original poor-baseline/race runners and numerical outputs lost",
+      "run_mode": "record inspection only",
+      "setup_notes": "CRHM is Belly River; do not substitute Blue River final-run environment. HBV/SUMMA poor-baseline results and CRHM seeded race are descriptive historical console evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_poor_baseline_followups.txt"
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/HBV"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/POOR_BASELINE_HBV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "POOR_BASELINE_SUMMA",
+      "paper": "SI S2.5; Table S12",
+      "question": "Did an initial workflow improve a poor baseline?",
+      "evidence_status": "console-record only; original poor-baseline/race runners and numerical outputs lost",
+      "run_mode": "record inspection only",
+      "setup_notes": "CRHM is Belly River; do not substitute Blue River final-run environment. HBV/SUMMA poor-baseline results and CRHM seeded race are descriptive historical console evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_poor_baseline_followups.txt"
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/SUMMA"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/POOR_BASELINE_SUMMA",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "POOR_BASELINE_CRHM",
+      "paper": "SI S2.5; Table S12",
+      "question": "Did an initial workflow improve a poor baseline?",
+      "evidence_status": "console-record only; original poor-baseline/race runners and numerical outputs lost",
+      "run_mode": "record inspection only",
+      "setup_notes": "CRHM is Belly River; do not substitute Blue River final-run environment. HBV/SUMMA poor-baseline results and CRHM seeded race are descriptive historical console evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_belly_bakeoff.txt"
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/POOR_BASELINE_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S12"
+      ]
+    },
+    {
+      "test_id": "AUTHORING_COST",
+      "paper": "SI S2.5; Table S13",
+      "question": "What authoring effort/cost was printed?",
+      "evidence_status": "console/transcript evidence plus reconstructed scripts; original run artifacts absent",
+      "run_mode": "record inspection; fresh API/CLI authoring would be a new sample",
+      "setup_notes": "Original usage JSONL files lost; GPT usage not captured.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_token_and_authoring_cost.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/token_bench.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/AUTHORING_COST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S13"
+      ]
+    },
+    {
+      "test_id": "CROSS_PROVIDER_AUTHORING",
+      "paper": "Main Table 1; SI S2.5; Table S13",
+      "question": "Did four model configurations produce the single-objective workflows?",
+      "evidence_status": "console/transcript evidence plus reconstructed scripts; original run artifacts absent",
+      "run_mode": "record inspection; fresh API/CLI authoring would be a new sample",
+      "setup_notes": "Nine additional Sonnet/Opus/GPT authored contracts are not retained. Earlier original six KI contracts must be distinguished from these lost authoring outputs.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_xvendor_cross_provider.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/benchmark/provider_bench.py"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/xvendor/xvendor_author.py"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/xvendor/codex_author_pilot.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/CROSS_PROVIDER_AUTHORING",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S13"
+      ]
+    },
+    {
+      "test_id": "GROUNDED_OPTIMIZER_DECISIONS",
+      "paper": "SI S2.5",
+      "question": "Did the point-estimate versus uncertainty framing alter optimizer choices?",
+      "evidence_status": "console/transcript evidence plus reconstructed scripts; original run artifacts absent",
+      "run_mode": "record inspection; fresh API/CLI authoring would be a new sample",
+      "setup_notes": "Only recorded decisions; WOFOST point/uncertainty pair is not established by a completed retained authoring.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RECOVERED_NUMBERS.md"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/discL1/drive_disc_L1.py"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/discL1/crhm_dds_vs_sceua.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/GROUNDED_OPTIMIZER_DECISIONS",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "BLINDED_OPTIMIZER_DECISIONS",
+      "paper": "Main Table 1; SI S2.5; Table S14",
+      "question": "Which optimizers did three vendors choose for four framings?",
+      "evidence_status": "console/transcript evidence plus reconstructed scripts; original run artifacts absent",
+      "run_mode": "record inspection; fresh API/CLI authoring would be a new sample",
+      "setup_notes": "Twelve printed decisions, not twelve numerical calibration runs.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/single_objective_phase/CONSOLE_RECORD.md"
+        },
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/RESULTS_xvendor_cross_provider.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/recovered/single_variable_phase_recovery/reconstructed_scripts/xvendor/decision_test.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 73,
+          "heading": "S2.5 Single-objective phase, authoring cost and cross-provider authoring"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/BLINDED_OPTIMIZER_DECISIONS",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.5",
+        "SI Table S1",
+        "SI Table S14"
+      ]
+    },
+    {
+      "test_id": "PROBE_HBV",
+      "paper": "SI S1.2",
+      "question": "Do parameter perturbations/split requests change the recorded response?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "inspect saved metrics; one-evaluation reruns require staging",
+      "setup_notes": "3 artifacts; part of the 18-artifact/five-family total, not independent fresh authorings.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/work_probe/m_def_cal.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/work_probe/m_def_hold.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/work_probe2/m_pert_cal.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/02_hbv_discharge_swe_moyie/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 18,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/PROBE_HBV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "PROBE_SUMMA",
+      "paper": "SI S1.2",
+      "question": "Do parameter perturbations/split requests change the recorded response?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "inspect saved metrics; one-evaluation reruns require staging",
+      "setup_notes": "2 artifacts; part of the 18-artifact/five-family total, not independent fresh authorings.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/commission_default/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/commission_perturbed/metrics.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/03_summa_discharge_swe_moyie/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 14,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/PROBE_SUMMA",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "PROBE_VIC",
+      "paper": "SI S1.2",
+      "question": "Do parameter perturbations/split requests change the recorded response?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "inspect saved metrics; one-evaluation reruns require staging",
+      "setup_notes": "7 artifacts; part of the 18-artifact/five-family total, not independent fresh authorings.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/eval_default/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/pert_binfilt_lo/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/pert_dsmax_hi/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/pert_lai_hi/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/pert_lai_lo/metrics.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/split_calibration/m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/split_holdout/m.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/04_vic_discharge_et_xixian/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 25,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/PROBE_VIC",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "PROBE_MODFLOW6",
+      "paper": "SI S1.2",
+      "question": "Do parameter perturbations/split requests change the recorded response?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "inspect saved metrics; one-evaluation reruns require staging",
+      "setup_notes": "2 artifacts; part of the 18-artifact/five-family total, not independent fresh authorings.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/commission/metrics_default.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/commission/metrics_pert.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/06_modflow6_flow_baseflow_sagehen/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 29,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/PROBE_MODFLOW6",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "PROBE_CRHM",
+      "paper": "SI S1.2",
+      "question": "Do parameter perturbations/split requests change the recorded response?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "inspect saved metrics; one-evaluation reruns require staging",
+      "setup_notes": "4 artifacts; part of the 18-artifact/five-family total, not independent fresh authorings.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/probe_default/m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/probe_pert/m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/probe_calibration/m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/probe_holdout/m.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki/tools/calib_run.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/ki"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 30,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/PROBE_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "E2_FSM2_INITIAL",
+      "paper": "Main Table 1; Fig.3; SI S3.1-S3.2; Table S4",
+      "question": "How does information condition or prescribed repair affect executable calibration?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "8 completed searches in this tier; 15 generations shared across tiers. judge.py invokes the binary. Match interpreter, sealed toolkit hashes, sibling FSM2_sealed path, and original runtime paths.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/DESIGN_confirmatory.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_AMENDMENT_2026-09-04.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/JUDGEMENT.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/validity.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/K1_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/K2_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/K3_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/K4_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/K5_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R1_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R2_seed0/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R5_seed0/calib_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/run_contract.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/judge.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/launch.sh"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/contracts",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/sealed"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/FSM2"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 85,
+          "heading": "S3.1 FSM2 information conditions and calibration protocol"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 93,
+          "heading": "S3.2 Prespecified repairs and generation effort"
+        }
+      ],
+      "record_file_count": 491,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E2_FSM2_INITIAL",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 3",
+        "SI S1.4",
+        "SI S3.1",
+        "SI S3.2",
+        "SI Table S1",
+        "SI Table S4"
+      ]
+    },
+    {
+      "test_id": "E2_FSM2_TARGET_REPAIR",
+      "paper": "Main Table 1; Fig.3; SI S3.1-S3.2; Table S4",
+      "question": "How does information condition or prescribed repair affect executable calibration?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "5 completed searches in this tier; 15 generations shared across tiers. judge.py invokes the binary. Match interpreter, sealed toolkit hashes, sibling FSM2_sealed path, and original runtime paths.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/DESIGN_confirmatory.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_AMENDMENT_2026-09-04.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/JUDGEMENT.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/validity.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M1_seed0_r4target/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M3_seed0_r4target/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M4_seed0_r4target/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R3_seed0_r4target/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R4_seed0_r4target/calib_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/run_contract.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/judge.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/launch.sh"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/contracts",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/sealed"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/FSM2"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 85,
+          "heading": "S3.1 FSM2 information conditions and calibration protocol"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 93,
+          "heading": "S3.2 Prespecified repairs and generation effort"
+        }
+      ],
+      "record_file_count": 491,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E2_FSM2_TARGET_REPAIR",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 3",
+        "SI S1.4",
+        "SI S3.1",
+        "SI S3.2",
+        "SI Table S1",
+        "SI Table S4"
+      ]
+    },
+    {
+      "test_id": "E2_FSM2_UNIT_REPAIR",
+      "paper": "Main Table 1; Fig.3; SI S3.1-S3.2; Table S4",
+      "question": "How does information condition or prescribed repair affect executable calibration?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "8 completed searches in this tier; 15 generations shared across tiers. judge.py invokes the binary. Match interpreter, sealed toolkit hashes, sibling FSM2_sealed path, and original runtime paths.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/DESIGN_confirmatory.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_AMENDMENT_2026-09-04.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/JUDGEMENT.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/validity.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M1_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M3_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/M4_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R1_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R2_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R3_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R4_seed0_r4units/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/runs/R5_seed0_r4units/calib_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/run_contract.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/judge.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/launch.sh"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/contracts",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/sealed"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/FSM2"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 85,
+          "heading": "S3.1 FSM2 information conditions and calibration protocol"
+        },
+        {
+          "document": "supporting_information.md",
+          "line": 93,
+          "heading": "S3.2 Prespecified repairs and generation effort"
+        }
+      ],
+      "record_file_count": 491,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E2_FSM2_UNIT_REPAIR",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 3",
+        "SI S1.4",
+        "SI S3.1",
+        "SI S3.2",
+        "SI Table S1",
+        "SI Table S4"
+      ]
+    },
+    {
+      "test_id": "E2_FSM2_EXPLORATORY",
+      "paper": "SI S3.2",
+      "question": "What did the exploratory precursor show before confirmatory design?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "Exploratory 9 generations and 15 completed searches; do not pool with confirmatory experiment.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/FSM2_AMENDMENT_2026-09-04.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/CONTRACT_FREEZE.txt"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/exploratory_run_not_preregistered/RESULT_FSM2_v2.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/exploratory_run_not_preregistered/results.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/rejudged_results.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/rejudge_common_reference.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/K1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/K2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/K3_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/M1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/M2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/M3_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/R1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/R2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference/contracts/R3_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/FSM2_sealed_package_bin_data_reference"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/FSM2"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 93,
+          "heading": "S3.2 Prespecified repairs and generation effort"
+        }
+      ],
+      "record_file_count": 334,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E2_FSM2_EXPLORATORY",
+      "paper_items": [
+        "Main Table 1",
+        "SI S3.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "E2_FSM2_SETUP_PROOFS",
+      "paper": "Supporting dependency for SI S3.1–S3.2",
+      "question": "Was the authoring sandbox/checker setup demonstrated?",
+      "evidence_status": "retained setup/proof logs, including failed setup attempt",
+      "run_mode": "inspect proof logs; rerun setup tests only after staging",
+      "setup_notes": "Keep current manifest-pinned setup/check code and the single seal-proof receipt from 20260904T140947Z; no setup proof is counted as a scientific replication.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/test_manifest.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/2_fsm2_knowledge/FSM2_not_memorization/full/check_launch.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "supporting_dependency",
+      "inclusion_reason": "Supports execution/build of a reported test; not another scientific replication.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 85,
+          "heading": "S3.1 FSM2 information conditions and calibration protocol"
+        }
+      ],
+      "record_file_count": 66,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E2_FSM2_SETUP_PROOFS",
+      "paper_items": []
+    },
+    {
+      "test_id": "E3_GR4J_STATIC",
+      "paper": "Main Table 1; Fig.S1; SI S3.3",
+      "question": "Do generated ranges and target names match the supplied interface and empirical reference?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "saved-output/static contract scoring; current-cohort wrapper recommended",
+      "setup_notes": "Nine current contracts present. Original main() requires historical v1/v2 side-input contracts. For current-only wrapper verify current/E1 hashes, set module.E1, call load_set(current contracts), score(), compare to saved v3 section; do not call original main(). Clean package keeps comparison_current_v3.json (exact v3 + canonical extraction). Saved-score wrapper must read this file. Original mixed-cohort comparison.json/tables are excluded.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/DESIGN_v3.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/comparison_current_v3.json",
+          "scope": "Verbatim current-v3 block extraction; original mixed-cohort file excluded."
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/compare_contracts_v3.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/K1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/K2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/K3_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/M1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/M2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/M3_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/R1_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/R2_calibration.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/contracts/R3_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/experiments/3_gr4j_ranges/B_ki_vs_memory_gr4j/full/sealed_corpora_from_v2"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 101,
+          "heading": "S3.3 GR4J parameter ranges and observation mapping"
+        }
+      ],
+      "record_file_count": 120,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E3_GR4J_STATIC",
+      "paper_items": [
+        "Main Table 1",
+        "SI S3.3",
+        "SI Figure S1",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "E4_VIC_PAIRED",
+      "paper": "Main Table 1; Fig.4a; SI S4.2; Table S5a",
+      "question": "Is fixed DDS validation performance non-inferior to continuing agent proposals at the declared paired budget?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "saved-output analysis after path/manifest staging; numerical/API campaign separate",
+      "setup_notes": "Ten paired blocks, 150 calibration calls per arm. Include frozen E4 contracts and runtime_deps/worker_diagnostics.py; fresh agent execution needs live CLI credentials, not archived account configs.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/DESIGN_v2.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/CAMPAIGN_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/ANALYSIS_paired_blocks.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/full/out_v2e",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/full/analysis_paired_blocks.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/full/run_A_v2.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/full/launch_A_v2.sh"
+        }
+      ],
+      "contract": [
+        {
+          "package": "06_knowledge_infrastructure/06_VIC_A/frozen_contract_inputs/authored_grounded.20260902T030746Z.json"
+        }
+      ],
+      "ki": [
+        {
+          "package": "04_research_archive/record/environments/A_VIC_Tangnaihai"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/A_VIC_Tangnaihai"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 125,
+          "heading": "S4.2 Fixed search and continuing agent proposals"
+        }
+      ],
+      "record_file_count": 539,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E4_VIC_PAIRED",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 4a",
+        "SI S1.4",
+        "SI S4.2",
+        "SI Table S1",
+        "SI Table S5a"
+      ]
+    },
+    {
+      "test_id": "E4_EXCLUDED_ATTEMPTS",
+      "paper": "SI S4.2",
+      "question": "Which infrastructure-interrupted attempts were excluded?",
+      "evidence_status": "retained attempt accounting and partial traces",
+      "run_mode": "record inspection only",
+      "setup_notes": "Ten excluded continuing-agent attempts; 30 trace files and 20 completed summaries in total. Excluded attempts are not independent successful blocks.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/DESIGN_v2.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/ANALYSIS_paired_blocks.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/4_vic_paired_search/A_author_once_vs_in_loop/full/out_v2e",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 125,
+          "heading": "S4.2 Fixed search and continuing agent proposals"
+        }
+      ],
+      "record_file_count": 537,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E4_EXCLUDED_ATTEMPTS",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 4a",
+        "SI S1.4",
+        "SI S4.2",
+        "SI Table S1",
+        "SI Table S5a"
+      ]
+    },
+    {
+      "test_id": "E5_GR4J_FORMULATIONS",
+      "paper": "Main Table 1; Fig.4b; SI S4.1; Table S3",
+      "question": "How consistent are five independently generated formulations across three optimizer seeds?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "15 original searches plus 6 objective twins =21. Full optimization window, no separate validation. Requires B harness sibling/gate staging. No v3 cell was rerun for fresh determinism evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/DESIGN_v3.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/CAMPAIGN_MANIFEST.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/PANEL_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/results.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/runs/panel1",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/collect_results_v3.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/run_contract.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/run_all_v3.sh"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/04_GR4J/C_engine_and_agent_K"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/C_GR4J_L0123001"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/sealed_exec"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 119,
+          "heading": "S4.1 Repeated GR4J formulation"
+        }
+      ],
+      "record_file_count": 261,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E5_GR4J_FORMULATIONS",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 4b",
+        "SI S1.4",
+        "SI S4.1",
+        "SI Table S1",
+        "SI Table S3"
+      ]
+    },
+    {
+      "test_id": "E5_GR4J_OBJECTIVE_INTERVENTIONS",
+      "paper": "Main Table 1; Fig.4b; SI S4.1; Table S3",
+      "question": "How do matched KGE-to-NSE objective substitutions alter results?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "15 original searches plus 6 objective twins =21. Full optimization window, no separate validation. Requires B harness sibling/gate staging. No v3 cell was rerun for fresh determinism evidence.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/DESIGN_v3.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/CAMPAIGN_MANIFEST.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/PANEL_MANIFEST.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/results.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/runs/panel1",
+          "selection": "Only the exact files assigned to this test in PAPER_EVIDENCE_MAP.json are included."
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/collect_results_v3.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/run_contract.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/run_all_v3.sh"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/04_GR4J/C_engine_and_agent_K"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/C_GR4J_L0123001"
+        },
+        {
+          "package": "04_research_archive/record/experiments/5_gr4j_repeated/C_stability_gr4j/full/sealed_exec"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 119,
+          "heading": "S4.1 Repeated GR4J formulation"
+        }
+      ],
+      "record_file_count": 261,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E5_GR4J_OBJECTIVE_INTERVENTIONS",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 4b",
+        "SI S1.4",
+        "SI S4.1",
+        "SI Table S1",
+        "SI Table S3"
+      ]
+    },
+    {
+      "test_id": "E6_SACSMA_IBEX",
+      "paper": "Main Table 1; Fig.4c; SI S5.1; Tables S5b-S5c",
+      "question": "How do three optimizers perform under a fixed literature-derived SAC-SMA setup?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "27 cells (3 methods x3 budgets x3 seeds);35,566 saved evaluations. No KI authoring. HYDAT and model paths must be staged; calibration-best vector is evaluated on validation.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_plan.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/README.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/SAC_SMA_duan_results/summary.csv"
+        },
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/SAC_SMA_duan_results/evals.csv"
+        },
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/SAC_SMA_duan_results/run.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_driver.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/6_sacsma_optimizers/literature/duan_harness.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/EXP6_SACSMA_Duan_HYDAT"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 139,
+          "heading": "S5.1 SAC-SMA optimizer comparison"
+        }
+      ],
+      "record_file_count": 25,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E6_SACSMA_IBEX",
+      "paper_items": [
+        "Main Table 1",
+        "Main Figure 4c",
+        "SI S5.1",
+        "SI Table S1",
+        "SI Table S5b",
+        "SI Table S5c"
+      ]
+    },
+    {
+      "test_id": "E7_E1_GR4J_AIRGR",
+      "paper": "Main Table 1; Fig.S5a-S5b; SI S3.4",
+      "question": "Does generated GR4J calibration approach the airGR reference on the same optimization window?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "One calibration. Turn-by-turn author transcript and reference airGR hydrograph unavailable; prompts/reports/metrics retained. Reconstruct as-read KI from documented backups.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/SPEC.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/READINESS.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/authoring_session/AUTHORED_FREEZE.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/authoring_session/MANIFEST.sha256"
+        },
+        {
+          "package": "06_knowledge_infrastructure/04_GR4J/E1_authoring_provenance/README.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/authoring_session/agent_authored.yaml"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/authoring_session/e1_authoring_prompt_and_result_from_session.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/calib_report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/answer_key.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/RESULT.md"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/run_e1.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/answer_key.R"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E1_airGR/agent_authored.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/04_GR4J/E1_server_KI_snapshot"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/E1_airGR"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 107,
+          "heading": "S3.4 GR4J reference calibration"
+        }
+      ],
+      "record_file_count": 26,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E7_E1_GR4J_AIRGR",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S3.4",
+        "SI Figure S5",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "E7_E2_SACSMA_CAMELS",
+      "paper": "Main Table 1; Fig.S5c; SI S3.5",
+      "question": "How does the generated standalone SAC-SMA workflow compare with related published coupled-model benchmark?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "record inspection; model campaign requires staging",
+      "setup_notes": "One generated calibration, distinct model/PET configuration from benchmark. Turn-by-turn author transcript absent; prompts and reports survive.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/SPEC.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/READINESS.md"
+        },
+        {
+          "package": "06_knowledge_infrastructure/05_SACSMA/E2_authoring_provenance/README.md"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/authoring_session/e2_authoring_prompt_and_result_from_session.json"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/results/e2_blanco_result.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/answer_key.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/run_e2_blanco.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/E1_E2_reproductions/E2_SACSMA_CAMELS/agent_authored.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/05_SACSMA/E2_KI_versions/as_read_by_agent_2026-09-02"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/E2_SACSMA_CAMELS"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 111,
+          "heading": "S3.5 SAC-SMA fit and parameter references"
+        }
+      ],
+      "record_file_count": 18,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E7_E2_SACSMA_CAMELS",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S3.5",
+        "SI Figure S5",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "E7_N_PARAMETER_REFERENCE",
+      "paper": "Fig.S5d; SI S3.5; Table S9",
+      "question": "Do fitted parameter identities/values agree with ten published same-basin reference seed files?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "saved-record comparison; no model needed; direct wrapper writes to archive unless output redirected",
+      "setup_notes": "11 fitted parameters and 110 reference values; different forcing/coupled configuration. Root packaging wrapper should write analysis output outside immutable record.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/RESULT_N.md"
+        }
+      ],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/comparison_tables.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/full/newman_08171300_seeds.csv"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_05_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_11_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_27_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_33_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_48_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_59_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_66_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_72_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_80_model_parameters.txt"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/newman_params/calibrated_params/08171300_94_model_parameters.txt"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/compare_newman.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/7_reference_comparisons/N_expert_match/run_compare_newman_record.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 111,
+          "heading": "S3.5 SAC-SMA fit and parameter references"
+        }
+      ],
+      "record_file_count": 17,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/E7_N_PARAMETER_REFERENCE",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S3.5",
+        "SI Figure S5",
+        "SI Table S1",
+        "SI Table S9"
+      ]
+    },
+    {
+      "test_id": "S_GENERATED_WOFOST",
+      "paper": "SI S2.3",
+      "question": "Can the agent generate a runnable model-specific multivariable workflow?",
+      "evidence_status": "retained generated artifacts and logs; exact earlier environment not independently packaged",
+      "run_mode": "record inspection; model rerun needs task KI/environment reconstruction",
+      "setup_notes": "Task-specific graph/convention and original native paths must be reassembled; full family KI is not automatically identical to this earlier task.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_agent.log"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/run_WOFOST.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_AGENT_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/wofost_AGENT_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 63,
+          "heading": "S2.3 Supporting workflow-generation examples"
+        }
+      ],
+      "record_file_count": 5,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_GENERATED_WOFOST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.3",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "S_GENERATED_CRHM",
+      "paper": "SI S2.3",
+      "question": "Can the agent generate a runnable model-specific multivariable workflow?",
+      "evidence_status": "retained generated artifacts and logs; exact earlier environment not independently packaged",
+      "run_mode": "record inspection; model rerun needs task KI/environment reconstruction",
+      "setup_notes": "Task-specific graph/convention and original native paths must be reassembled; full family KI is not automatically identical to this earlier task.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_agent.log"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/run_CRHM.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_AGENT_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/crhm_AGENT_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 63,
+          "heading": "S2.3 Supporting workflow-generation examples"
+        }
+      ],
+      "record_file_count": 5,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_GENERATED_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.3",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "S_SCALAR_DECISION_PROBE",
+      "paper": "SI S2.3",
+      "question": "Can two variables combined into one scalar score elicit a single-objective/DDS formulation?",
+      "evidence_status": "retained successful single decision log",
+      "run_mode": "record inspection; fresh authoring would be new sample",
+      "setup_notes": "One decision, not replicated evidence of generalized optimizer-choice accuracy.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/agent_authored/trick.log"
+        }
+      ],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 63,
+          "heading": "S2.3 Supporting workflow-generation examples"
+        }
+      ],
+      "record_file_count": 2,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_SCALAR_DECISION_PROBE",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.3",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "S_DIRECT_WOFOST_MV",
+      "paper": "SI S2.4; Table S1b",
+      "question": "Does a hand-written multivariable driver execute and report component acceptance?",
+      "evidence_status": "retained results/contracts; complete exact task environment not packaged",
+      "run_mode": "record inspection; native rerun requires task reconstruction",
+      "setup_notes": "Hand-written driver, not agent generation. Code references historical /tmp task KI paths; proof KI snapshots contain runner/contract but no complete task graph/convention.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/wofost_mv_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_mv_run.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_mv_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_mv_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 69,
+          "heading": "S2.4 Direct-driver multivariable applications"
+        }
+      ],
+      "record_file_count": 6,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_DIRECT_WOFOST_MV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.4",
+        "SI Table S1",
+        "SI Table S1b",
+        "SI Table S1b continued"
+      ]
+    },
+    {
+      "test_id": "S_DIRECT_WOFOST_LAI",
+      "paper": "SI S2.4; Table S1b",
+      "question": "Does a hand-written multivariable driver execute and report component acceptance?",
+      "evidence_status": "retained results/contracts; complete exact task environment not packaged",
+      "run_mode": "record inspection; native rerun requires task reconstruction",
+      "setup_notes": "Hand-written driver, not agent generation. Code references historical /tmp task KI paths; proof KI snapshots contain runner/contract but no complete task graph/convention.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/wofost_lai_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_lai_run.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_lai_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_lai_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/WOFOST"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 69,
+          "heading": "S2.4 Direct-driver multivariable applications"
+        }
+      ],
+      "record_file_count": 6,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_DIRECT_WOFOST_LAI",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.4",
+        "SI Table S1",
+        "SI Table S1b",
+        "SI Table S1b continued"
+      ]
+    },
+    {
+      "test_id": "S_DIRECT_CRHM_MV",
+      "paper": "SI S2.4; Table S1b",
+      "question": "Does a hand-written multivariable driver execute and report component acceptance?",
+      "evidence_status": "retained results/contracts; complete exact task environment not packaged",
+      "run_mode": "record inspection; native rerun requires task reconstruction",
+      "setup_notes": "Hand-written driver, not agent generation. Code references historical /tmp task KI paths; proof KI snapshots contain runner/contract but no complete task graph/convention.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/crhm_mv_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/crhm_mv_run.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/crhm_mv_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/crhm_mv_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/CRHM"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 69,
+          "heading": "S2.4 Direct-driver multivariable applications"
+        }
+      ],
+      "record_file_count": 8,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_DIRECT_CRHM_MV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.4",
+        "SI Table S1",
+        "SI Table S1b",
+        "SI Table S1b continued"
+      ]
+    },
+    {
+      "test_id": "S_DIRECT_VIC_MV",
+      "paper": "SI S2.4; Table S1b",
+      "question": "Does a hand-written multivariable driver execute and report component acceptance?",
+      "evidence_status": "retained results/contracts; complete exact task environment not packaged",
+      "run_mode": "record inspection; native rerun requires task reconstruction",
+      "setup_notes": "Hand-written driver, not agent generation. Code references historical /tmp task KI paths; proof KI snapshots contain runner/contract but no complete task graph/convention.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/vic_mv_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/vic_mv_run.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/vic_mv_calib_run.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/vic_mv_calibration.yaml"
+        }
+      ],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/01_six_family_full_snapshot_2026-09-16/VIC"
+        }
+      ],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 69,
+          "heading": "S2.4 Direct-driver multivariable applications"
+        }
+      ],
+      "record_file_count": 9,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_DIRECT_VIC_MV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S2.4",
+        "SI Table S1",
+        "SI Table S1b",
+        "SI Table S1b continued"
+      ]
+    },
+    {
+      "test_id": "S_HYMOD_BUDGET",
+      "paper": "SI S5.2; Table S8a; Fig.S4a",
+      "question": "How do DDS and SCE-UA endpoints change across six nominal budgets?",
+      "evidence_status": "retained 36 endpoint log records; full-window scoring",
+      "run_mode": "saved-log analysis; model rerun requires recorded SPOTPY version/example data",
+      "setup_notes": "Seeds0-2. Reported optimizer repetitions differ from verified physical model-call counts.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/l1_sweep.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/l1_budget_sweep.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 3,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_HYMOD_BUDGET",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Figure S4",
+        "SI Table S1",
+        "SI Table S8a"
+      ]
+    },
+    {
+      "test_id": "S_HYMOD_RANDOM",
+      "paper": "SI S5.2; Tables S8b-S8c; Fig.S4b",
+      "question": "How do DDS results compare with random-search means?",
+      "evidence_status": "three-seed means retained; individual random endpoints absent",
+      "run_mode": "record inspection; fresh rerun would not recover historical missing rows",
+      "setup_notes": "Nine DDS endpoints overlap main sweep; do not count them as new replication.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/baselines.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/baselines.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 3,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_HYMOD_RANDOM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Figure S4",
+        "SI Table S1",
+        "SI Table S8b",
+        "SI Table S8c"
+      ]
+    },
+    {
+      "test_id": "S_HV_HYMOD",
+      "paper": "SI S5.2; Table S11; Fig.S4c-S4d",
+      "question": "How do population and pooled weighted-scalar candidates compare at matched nominal total budgets?",
+      "evidence_status": "retained single-seed rounded hypervolume log values",
+      "run_mode": "saved-log analysis; fresh model runs require task staging",
+      "setup_notes": "Different objective/reference systems across models; no pooled HV comparison. Nominal budgets do not certify equal physical calls.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/l3_hymod.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/l3_hymod.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 3,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_HV_HYMOD",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Figure S4",
+        "SI Table S1",
+        "SI Table S11"
+      ]
+    },
+    {
+      "test_id": "S_HV_WOFOST",
+      "paper": "SI S5.2; Table S11; Fig.S4c-S4d",
+      "question": "How do population and pooled weighted-scalar candidates compare at matched nominal total budgets?",
+      "evidence_status": "retained single-seed rounded hypervolume log values",
+      "run_mode": "saved-log analysis; fresh model runs require task staging",
+      "setup_notes": "Different objective/reference systems across models; no pooled HV comparison. Nominal budgets do not certify equal physical calls.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/l3_rematch.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/l3_budget_rematch.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 3,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_HV_WOFOST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Figure S4",
+        "SI Table S1",
+        "SI Table S11"
+      ]
+    },
+    {
+      "test_id": "S_WOFOST_BACKENDS",
+      "paper": "SI S5.2; Table S11; Fig.S4e-S4f",
+      "question": "What fronts and acceptance decisions result from three population backends?",
+      "evidence_status": "retained three-backend results at budget40/seed0",
+      "run_mode": "saved-output analysis; model reruns require earlier WOFOST task KI",
+      "setup_notes": "No backend satisfies all criteria.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/wofost_sweep.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/wofost_sweep.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/wofost_sweep.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_mv_calibration.yaml"
+        }
+      ],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 5,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_WOFOST_BACKENDS",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Figure S4",
+        "SI Table S1",
+        "SI Table S11"
+      ]
+    },
+    {
+      "test_id": "S_CRHM_KNEE",
+      "paper": "SI S5.2; Table S11",
+      "question": "Is one selected validation knee dominated by retained scalar/random candidates?",
+      "evidence_status": "retained two-budget single-point diagnostic",
+      "run_mode": "record inspection; model rerun requires original task staging",
+      "setup_notes": "Not a full-front performance comparison. Random points evaluated on validation; earlier failed rescore is historical.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/l3crhm_fixed.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/l3_crhm_fixed.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/crhm_mv_calibration.yaml"
+        }
+      ],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 4,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_CRHM_KNEE",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Table S1",
+        "SI Table S11"
+      ]
+    },
+    {
+      "test_id": "S_RANGE_WOFOST",
+      "paper": "SI S5.3; Table S10a; Fig.S3a",
+      "question": "How do supplied versus threefold-widened parameter ranges alter calibration?",
+      "evidence_status": "retained both arms, including failed/inconclusive outcomes",
+      "run_mode": "saved-output comparison; numerical rerun requires original environment",
+      "setup_notes": "Nominal150/seed0. WOFOST original-range screening failed; MODFLOW widened validation inconclusive. These are recorded outcomes, not absent files.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/01_WOFOST__A0m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/01_WOFOST__A2.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/run_ablation.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/01_WOFOST"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_RANGE_WOFOST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10a"
+      ]
+    },
+    {
+      "test_id": "S_RANGE_HBV",
+      "paper": "SI S5.3; Table S10a; Fig.S3a",
+      "question": "How do supplied versus threefold-widened parameter ranges alter calibration?",
+      "evidence_status": "retained both arms, including failed/inconclusive outcomes",
+      "run_mode": "saved-output comparison; numerical rerun requires original environment",
+      "setup_notes": "Nominal150/seed0. WOFOST original-range screening failed; MODFLOW widened validation inconclusive. These are recorded outcomes, not absent files.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/02_HBV__A0m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/02_HBV__A2.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/run_ablation.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/02_HBV"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_RANGE_HBV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10a"
+      ]
+    },
+    {
+      "test_id": "S_RANGE_SUMMA",
+      "paper": "SI S5.3; Table S10a; Fig.S3a",
+      "question": "How do supplied versus threefold-widened parameter ranges alter calibration?",
+      "evidence_status": "retained both arms, including failed/inconclusive outcomes",
+      "run_mode": "saved-output comparison; numerical rerun requires original environment",
+      "setup_notes": "Nominal150/seed0. WOFOST original-range screening failed; MODFLOW widened validation inconclusive. These are recorded outcomes, not absent files.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/03_SUMMA__A0m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/03_SUMMA__A2.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/run_ablation.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/03_SUMMA"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_RANGE_SUMMA",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10a"
+      ]
+    },
+    {
+      "test_id": "S_RANGE_MODFLOW6",
+      "paper": "SI S5.3; Table S10a; Fig.S3a",
+      "question": "How do supplied versus threefold-widened parameter ranges alter calibration?",
+      "evidence_status": "retained both arms, including failed/inconclusive outcomes",
+      "run_mode": "saved-output comparison; numerical rerun requires original environment",
+      "setup_notes": "Nominal150/seed0. WOFOST original-range screening failed; MODFLOW widened validation inconclusive. These are recorded outcomes, not absent files.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/05_MODFLOW6__A0m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/05_MODFLOW6__A2.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/run_ablation.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/05_MODFLOW6"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_RANGE_MODFLOW6",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10a"
+      ]
+    },
+    {
+      "test_id": "S_RANGE_CRHM",
+      "paper": "SI S5.3; Table S10a; Fig.S3a",
+      "question": "How do supplied versus threefold-widened parameter ranges alter calibration?",
+      "evidence_status": "retained both arms, including failed/inconclusive outcomes",
+      "run_mode": "saved-output comparison; numerical rerun requires original environment",
+      "setup_notes": "Nominal150/seed0. WOFOST original-range screening failed; MODFLOW widened validation inconclusive. These are recorded outcomes, not absent files.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/06_CRHM__A0m.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/out/06_CRHM__A2.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/run_ablation.py"
+        }
+      ],
+      "contract": [],
+      "ki": [
+        {
+          "package": "06_knowledge_infrastructure/02_six_family_task_KIs/06_CRHM"
+        }
+      ],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 15,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_RANGE_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10a"
+      ]
+    },
+    {
+      "test_id": "S_CACHED_SELECTION",
+      "paper": "SI S5.3; Table S10b; Fig.S3c",
+      "question": "How does calibration-only selection by mean temporal loss alter cached target metrics?",
+      "evidence_status": "retained derived source table and original six-family caches",
+      "run_mode": "saved-output analysis with original path remapping",
+      "setup_notes": "Twelve targets, no new model calls; selection diagnostic rather than rerun with changed optimizer/objective.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "02_source_data/Supporting_Figures/Figure_S3/panel_c_selection_comparison.csv"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/ablations/ablation_cache.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 35,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_CACHED_SELECTION",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1",
+        "SI Table S10b"
+      ]
+    },
+    {
+      "test_id": "S_CRHM_PROTECTED_SELECTION",
+      "paper": "SI S5.3; Fig.S3b",
+      "question": "How does discharge protection alter selection from an identical front?",
+      "evidence_status": "retained same-front before/after selections",
+      "run_mode": "saved-output/front analysis",
+      "setup_notes": "Forty-member front after120eval; not two independent searches.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/report.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/multivariable_archive/cases/07_crhm_discharge_swe_blueriver/report_knee.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/framework_code/calibration_kit/calib.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 29,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_CRHM_PROTECTED_SELECTION",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "S_WOFOST_ASSESSMENT",
+      "paper": "SI S5.3; Fig.S3d",
+      "question": "Why do threshold attainment and joint acceptance differ?",
+      "evidence_status": "retained machine-readable output",
+      "run_mode": "saved-output acceptance analysis",
+      "setup_notes": "Reuses declared-budget WOFOST result; not a new calibration.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/1_six_model/six_model_families/01_WOFOST/rerun_conv_report.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/framework_code/calibration_kit/holdout.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 153,
+          "heading": "S5.3 Parameter ranges and solution selection"
+        }
+      ],
+      "record_file_count": 2,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_WOFOST_ASSESSMENT",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.3",
+        "SI Figure S3",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "S_DREAM_ADAPTER",
+      "paper": "SI S5.4",
+      "question": "Is the corrected DREAM adapter able to retain chain-state summaries?",
+      "evidence_status": "retained contemporaneous log; no convergence/coverage validation",
+      "run_mode": "record inspection; fresh sampling is a new numerical run",
+      "setup_notes": "compare.log lines2530-2562: nominal3000,seed0,7chains,34fillediterations,119post-burn-in states. l1_sweep.log instead contains a nominal5000 demo.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/compare.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/hymod_compare.py"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/DREAM_FIX_spotpy_backend.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 161,
+          "heading": "S5.4 Sampling adapter"
+        }
+      ],
+      "record_file_count": 4,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_DREAM_ADAPTER",
+      "paper_items": [
+        "Main Table 1",
+        "SI S5.4",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_FRONT_SELECT",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source plus reported pass note",
+      "run_mode": "implementation tests after dependency/path staging",
+      "setup_notes": "Eight selector tests. Included in the17 total, not additional.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/OUTCOME_protect_front_select.md"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/test_front_select.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_FRONT_SELECT",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_STOP",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source plus reported pass note",
+      "run_mode": "implementation tests after dependency/path staging",
+      "setup_notes": "Seven stop-hook tests; hardcoded historical VIC KI path.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/OUTCOME_pymoo_stop_hook.md"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/test_stop.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_STOP",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_MADR_BACKEND",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source plus reported pass note",
+      "run_mode": "implementation tests after dependency/path staging",
+      "setup_notes": "Two MADR tests; included in the17 total.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/OUTCOME_pymoo_stop_hook.md"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/test_madr_backend.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_MADR_BACKEND",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_REFERENCE_CASE",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source only; complete passing-run record unavailable",
+      "run_mode": "implementation tests after dependency/path staging",
+      "setup_notes": "Seven case-identity tests; complete historical pass transcript unavailable.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/calibration_kit/test_reference_case.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/reproduce/ENVIRONMENT.txt"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_REFERENCE_CASE",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_QUANTITY_CONTRACT",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source retained; complete historical passing-run record unavailable",
+      "run_mode": "implementation tests after toolkit extraction/dependency staging",
+      "setup_notes": "Required imported modules/templates are in toolkit tarball, not all adjacent to loose test source. Do not assume standalone test-folder execution.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/auto_dissect_multi_agent_tests/test_quantity_contract.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/toolkit_at_3ed4e991/knowledge-dissection-toolkit_3ed4e991.tar.gz"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_QUANTITY_CONTRACT",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_RECORD_LAYER",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source retained; complete historical passing-run record unavailable",
+      "run_mode": "implementation tests after toolkit extraction/dependency staging",
+      "setup_notes": "Required imported modules/templates are in toolkit tarball, not all adjacent to loose test source. Do not assume standalone test-folder execution.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/auto_dissect_multi_agent_tests/test_record_layer.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/toolkit_at_3ed4e991/knowledge-dissection-toolkit_3ed4e991.tar.gz"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_RECORD_LAYER",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_CODEX_EXEC_COMMON",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source retained; complete historical passing-run record unavailable",
+      "run_mode": "implementation tests after toolkit extraction/dependency staging",
+      "setup_notes": "Required imported modules/templates are in toolkit tarball, not all adjacent to loose test source. Do not assume standalone test-folder execution.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/auto_dissect_multi_agent_tests/test_codex_exec_common.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/toolkit_at_3ed4e991/knowledge-dissection-toolkit_3ed4e991.tar.gz"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_CODEX_EXEC_COMMON",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_TOOL_REVIEWER",
+      "paper": "SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source retained; complete historical passing-run record unavailable",
+      "run_mode": "implementation tests after toolkit extraction/dependency staging",
+      "setup_notes": "Required imported modules/templates are in toolkit tarball, not all adjacent to loose test source. Do not assume standalone test-folder execution.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/auto_dissect_multi_agent_tests/test_tool_reviewer.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/toolkit_at_3ed4e991/knowledge-dissection-toolkit_3ed4e991.tar.gz"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_TOOL_REVIEWER",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.2",
+        "SI Table S1"
+      ]
+    },
+    {
+      "test_id": "UNIT_PREFLIGHT_TEMPLATE",
+      "paper": "Supporting framework dependency for SI S1.2",
+      "question": "Does the implementation enforce the named contract/invariant?",
+      "evidence_status": "test source retained; complete historical passing-run record unavailable",
+      "run_mode": "implementation tests after toolkit extraction/dependency staging",
+      "setup_notes": "Required imported modules/templates are in toolkit tarball, not all adjacent to loose test source. Do not assume standalone test-folder execution.",
+      "protocol": [],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/framework/kdt_repo_snapshot/auto_dissect_multi_agent_tests/test_preflight_template.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/framework/toolkit_at_3ed4e991/knowledge-dissection-toolkit_3ed4e991.tar.gz"
+        }
+      ],
+      "inclusion": "supporting_dependency",
+      "inclusion_reason": "Supports execution/build of a reported test; not another scientific replication.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 17,
+          "heading": "S1.2 Implementation checks"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/UNIT_PREFLIGHT_TEMPLATE",
+      "paper_items": [
+        "SI S1.2"
+      ]
+    },
+    {
+      "test_id": "REPLAY_01_WOFOST",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/01_WOFOST"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_01_WOFOST",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_02_HBV",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/02_HBV"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_02_HBV",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_03_SUMMA",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/03_SUMMA"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_03_SUMMA",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_04_VIC",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/04_VIC"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_04_VIC",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_05_MODFLOW6",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/05_MODFLOW6"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_05_MODFLOW6",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_06_CRHM",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/06_CRHM"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_06_CRHM",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_A_VIC_Tangnaihai",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/A_VIC_Tangnaihai/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/A_VIC_Tangnaihai"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_A_VIC_Tangnaihai",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_C_GR4J_L0123001",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/C_GR4J_L0123001/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/C_GR4J_L0123001"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_C_GR4J_L0123001",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_E1_airGR",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/E1_airGR/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/E1_airGR"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_E1_airGR",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_E2_SACSMA_CAMELS",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/E2_SACSMA_CAMELS/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [
+        {
+          "package": "04_research_archive/record/environments/E2_SACSMA_CAMELS/rerun_one_eval.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/E2_SACSMA_CAMELS"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_E2_SACSMA_CAMELS",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "REPLAY_FSM2",
+      "paper": "Main Table1; SI S4.3; TableS6",
+      "question": "Does one specified parameter vector reproduce its saved metrics/output?",
+      "evidence_status": "retained reference and replay evidence",
+      "run_mode": "one native model evaluation after RERUN.md/README staging",
+      "setup_notes": "A numerical replay, not a repeated full search or fresh generation. Use documented exact vector/split; SUMMA recorded vector and E2 native-file vector matter.",
+      "protocol": [
+        {
+          "package": "04_research_archive/record/environments/FSM2/RERUN.md"
+        }
+      ],
+      "results": [],
+      "script": [],
+      "contract": [],
+      "ki": [],
+      "environment": [
+        {
+          "package": "04_research_archive/record/environments/FSM2"
+        }
+      ],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 133,
+          "heading": "S4.3 Reproduction of specified numerical evaluations"
+        }
+      ],
+      "record_file_count": 0,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/REPLAY_FSM2",
+      "paper_items": [
+        "Main Table 1",
+        "SI S4.3",
+        "SI Table S1",
+        "SI Table S6"
+      ]
+    },
+    {
+      "test_id": "FIGURE_S2_BUILD",
+      "paper": "Fig.S2",
+      "question": "Can the six-model assessment figure be regenerated from its retained inputs?",
+      "evidence_status": "original local builder and data recovered; original PNG SHA256 equals canonical S2",
+      "run_mode": "saved-data figure rebuild; call figure3 only from writable staged wrapper",
+      "setup_notes": "Original source discovered by following provenance path on local disk, outside SSD. Import reads source_data/figure_source_data.json and creates figures/. Remap six family.source paths to included report JSONs; figure3 asserts component equality. Do not call original main, which also builds oldFigures2/4.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "01_journal_submission/03_Figures/Supporting_Figures/Figure_S2.png"
+        },
+        {
+          "package": "02_source_data/Supporting_Figures/Figure_S2/provenance.json"
+        },
+        {
+          "package": "03_code/Supporting_Figure_Builds/figures/S2/recovered_original/source_data/figure_source_data.json"
+        },
+        {
+          "package": "03_code/Supporting_Figure_Builds/figures/S2/recovered_original/figures/plotting_manifest.json"
+        }
+      ],
+      "script": [
+        {
+          "package": "03_code/Supporting_Figure_Builds/figures/S2/recovered_original/scripts/build_quantitative_figures.py"
+        }
+      ],
+      "contract": [],
+      "ki": [],
+      "environment": [],
+      "inclusion": "supporting_dependency",
+      "inclusion_reason": "Supports execution/build of a reported test; not another scientific replication.",
+      "paper_anchors": [],
+      "record_file_count": 7,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/FIGURE_S2_BUILD",
+      "paper_items": [
+        "SI Figure S2"
+      ]
+    },
+    {
+      "test_id": "S_HV_WOFOST_UNEQUAL",
+      "paper": "SI S5.2; Table S11 (WOFOST unequal nominal budgets)",
+      "question": "What hypervolume was recorded for NSGA-II 40 versus five DDS searches at 30 evaluations each?",
+      "evidence_status": "retained single-seed rounded hypervolume log values",
+      "run_mode": "saved-log analysis; fresh model runs require task staging",
+      "setup_notes": "Reported descriptive unequal-effort comparison; do not pool with the equal-budget WOFOST comparison.",
+      "protocol": [],
+      "results": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/results/nsga2_vs_scalar.json"
+        },
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/logs/nsga2_vs_scalar.log"
+        }
+      ],
+      "script": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/code/nsga2_vs_scalar.py"
+        }
+      ],
+      "contract": [
+        {
+          "package": "04_research_archive/record/experiments/S_supplementary/axisAB_original_study/contracts/wofost_mv_calibration.yaml"
+        }
+      ],
+      "ki": [],
+      "environment": [],
+      "inclusion": "reported",
+      "inclusion_reason": "Current manuscript/SI reported result or its necessary reproducibility input.",
+      "paper_anchors": [
+        {
+          "document": "supporting_information.md",
+          "line": 145,
+          "heading": "S5.2 HYMOD and multivariable search comparisons"
+        }
+      ],
+      "record_file_count": 5,
+      "evidence_file_map": "PAPER_EVIDENCE_MAP.json#test_records/S_HV_WOFOST_UNEQUAL",
+      "paper_items": [
+        "Main Table 1",
+        "SI S1.4",
+        "SI S5.2",
+        "SI Table S1",
+        "SI Table S11"
+      ]
+    }
+  ]
+}
